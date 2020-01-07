@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
-    android:background="@drawable/black"
+    android:background="@color/lightgreybg"
     tools:context=".MainActivity">
 
 
@@ -17,7 +17,7 @@
         android:fontFamily="monospace"
         android:text="00:00:00"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/questionnum"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="question no: 1"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/question"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -45,7 +45,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="monospace"
         android:text="TextView"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/choice1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -128,6 +128,9 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:text="skip question"
+        android:background="@drawable/buttonbg"
+        android:textColor="@color/white"
+        android:padding="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -135,9 +138,11 @@
         android:id="@+id/finish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="see your test report"
+        android:background="@drawable/bluebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -147,6 +152,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="answer later"
+        android:background="@drawable/buttonbg"
+        android:padding="5dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

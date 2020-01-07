@@ -30,7 +30,6 @@ public class jadv1 extends AppCompatActivity {
         choice2 = (Button) findViewById(R.id.choice2);
         choice3 = (Button) findViewById(R.id.choice3);
         choice4 = (Button) findViewById(R.id.choice4);
-
         updateQuestion();
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override

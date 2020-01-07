@@ -31,6 +31,11 @@ public class neet1progress extends AppCompatActivity {
 
         Intent in=new Intent(neet1progress.this,result.class);
         in.putExtra("youranswer",youranswer);
+        neet1progress.this.finish();
         startActivity(in);
+    }
+    public void onBackPressed()
+    {
+        neet1progress.this.finish();
     }
 }

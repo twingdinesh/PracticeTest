@@ -5,22 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:padding="5dp"
     android:orientation="vertical"
-    android:background="@drawable/black"
+    android:background="@color/lightgreybg"
     android:weightSum="3"
     tools:context=".startActivity">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="START MODAL TEST"
-        android:gravity="center_horizontal"
-        android:textSize="20sp"
-        android:fontFamily="monospace"
-        android:textColor="@color/white"
-        android:layout_margin="1dp"
-        android:paddingTop="40sp"
-        />
 
 
         <ImageView
@@ -29,7 +19,7 @@
             android:layout_alignParentLeft="true"
             android:onClick="neet"
             android:layout_margin="2sp"
-            android:background="@drawable/buttonbg"
+            android:background="@drawable/lightbluebg"
             android:src="@drawable/neet"
             android:layout_weight="1"
             />
@@ -39,7 +29,7 @@
             android:src="@drawable/jeemain"
             android:layout_margin="2sp"
             android:onClick="jeemain"
-            android:background="@drawable/bluebutton"
+            android:background="@drawable/lightbluebg"
             android:layout_alignParentRight="true"
             android:layout_weight="1"
             />
@@ -48,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="200sp"
         android:layout_margin="2sp"
-        android:background="@drawable/buttonbg"
+        android:background="@drawable/lightbluebg"
         android:onClick="jeeadvance"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/jeeadvanced"

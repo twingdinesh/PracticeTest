@@ -9,4 +9,6 @@
     <color name="black">#0a0a0a</color>
     <color name="green">#0af52d</color>
     <color name="rose">#f507ae</color>
+    <color name="lightgreybg">#dce3de</color>
+    <color name="lightblue">#8de3f2</color>
 </resources>

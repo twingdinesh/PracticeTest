@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -22,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
    private TextView questionno,mquestionview,time;
    private Button choice1,choice2,choice3,choice4,skip,finish,answerlater;
    private String manswer;
-   private int mquestionnumber=0;
+   private int mquestionnumber=0,checklatecounter=0,num;
    public  int[] ans=new int[questionlibrary.length];
-   public String checklate="";
+   public ArrayList<Integer> checklate=new ArrayList<Integer>();
    CountDownTimer count;
     public static int attendedans=0,mscore=0,correctanswer=0,wronganswer=0,skipquestions=0,totalquestions;
 
@@ -182,13 +183,14 @@ public class MainActivity extends AppCompatActivity {
                 useranswer(0);
                 skipquestions++;
                 updateQuestion();
+
             }
         });
 
         answerlater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checklate+=(mquestionnumber+",");
+                checklate.add(mquestionnumber-1);
                 updateQuestion();
             }
         });
@@ -241,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }.start();
 
-
+        totalquestions=questionlibrary.length;
     }
 
     private void finishtest() {
@@ -265,28 +267,82 @@ public class MainActivity extends AppCompatActivity {
             choice4.setText(questionlibrary.getChoice4(mquestionnumber));
             manswer = questionlibrary.getCorrectAnswer(mquestionnumber);
             mquestionnumber++;
+            if(mquestionnumber==questionlibrary.length)
+                answerlater.setVisibility(View.INVISIBLE);
         }
         else {
-            if(checklate!="")
-            {
-                String num="";
-                for(int i=0;i<checklate.length();i++){
-                    if(checklate.charAt(i)!=',') {
-                        num += checklate.charAt(i);
+            if(checklate.size()!=0) {
+                while (checklatecounter != checklate.size()) {
+                    checklate();
+                    choice1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            ans[checklatecounter - 1] = 1;
+                            attendedans++;
+                            if (choice1.getText().equals(questionlibrary.getCorrectAnswer(num))) {
+                                correctanswer++;
+                                mscore = mscore + 4;
+                                checklate();
+                            } else {
+                                wronganswer++;
+                                mscore--;
+                                checklate();
+                            }
+                        }
+                    });
+                    choice2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            ans[checklatecounter - 1] = 2;
+                            attendedans++;
+                            if (choice2.getText().equals(questionlibrary.getCorrectAnswer(num))) {
+                                correctanswer++;
+                                mscore = mscore + 4;
+                                checklate();
+                            } else {
+                                wronganswer++;
+                                mscore--;
+                                checklate();
+                            }
+                        }
+                    });
+                    choice3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            ans[checklatecounter - 1] = 3;
+                            attendedans++;
+                            if (choice3.getText().equals(questionlibrary.getCorrectAnswer(num))) {
+                                correctanswer++;
+                                mscore = mscore + 4;
+                                checklate();
+                            } else {
+                                wronganswer++;
+                                mscore--;
+                                checklate();
+                            }
+                        }
+                    });
+                    choice4.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            ans[checklatecounter - 1] = 4;
+                            attendedans++;
+                            if (choice4.getText().equals(questionlibrary.getCorrectAnswer(num))) {
+                                correctanswer++;
+                                mscore = mscore + 4;
+                                checklate();
+                            } else {
+                                wronganswer++;
+                                mscore--;
+                                checklate();
+                            }
+                        }
+                    });
 
-                    }
-                    else{
-                        questionno.setText("Question no:"+(Integer.parseInt(num)+1));
-                        mquestionview.setText(questionlibrary.getQuestions(Integer.parseInt(num)));
-                        choice1.setText(questionlibrary.getChoice1(Integer.parseInt(num)));
-                        choice2.setText(questionlibrary.getChoice2(Integer.parseInt(num)));
-                        choice3.setText(questionlibrary.getChoice3(Integer.parseInt(num)));
-                        choice4.setText(questionlibrary.getChoice4(Integer.parseInt(num)));
-                        manswer = questionlibrary.getCorrectAnswer(Integer.parseInt(num));
-                    }
                 }
             }
-            else {
+            else
+            {
                 finish.setVisibility(View.VISIBLE);
                 questionno.setVisibility(View.INVISIBLE);
                 mquestionview.setVisibility(View.INVISIBLE);
@@ -295,9 +351,9 @@ public class MainActivity extends AppCompatActivity {
                 choice3.setVisibility(View.INVISIBLE);
                 choice4.setVisibility(View.INVISIBLE);
             }
-
         }
     }
+
 
     public void useranswer(int a)
     {
@@ -312,14 +368,41 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle("quit test?").setMessage("are you sure you want to quit the test?").setPositiveButton("yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(MainActivity.this,answer.class);
+//                Intent in=new Intent(MainActivity.this,answer.class);
                 MainActivity.this.finish();
-                startActivity(in);
+                startActivity(new Intent(MainActivity.this,answer.class));
             }
         }).setNegativeButton("no",null).setCancelable(false);
         AlertDialog alert=builder.create();
         alert.show();
     }
 
+    public void checklate()
+    {
+        if(checklatecounter!=checklate.size()) {
+            Integer integer = new Integer(checklate.get(checklatecounter));
+            num = integer.intValue();
+            questionno.setText("Question no:" + (num + 1));
+            mquestionview.setText(questionlibrary.getQuestions(num));
+            choice1.setText(questionlibrary.getChoice1(num));
+            choice2.setText(questionlibrary.getChoice2(num));
+            choice3.setText(questionlibrary.getChoice3(num));
+            choice4.setText(questionlibrary.getChoice4(num));
+            checklatecounter++;
+            if(checklatecounter!=checklate.size())
+                answerlater.setVisibility(View.INVISIBLE);
+        }
+        else
+        {
+            finish.setVisibility(View.VISIBLE);
+            questionno.setVisibility(View.INVISIBLE);
+            mquestionview.setVisibility(View.INVISIBLE);
+            choice1.setVisibility(View.INVISIBLE);
+            choice2.setVisibility(View.INVISIBLE);
+            choice3.setVisibility(View.INVISIBLE);
+            choice4.setVisibility(View.INVISIBLE);
+        }
+
+    }
 
 }

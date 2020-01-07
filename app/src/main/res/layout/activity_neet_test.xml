@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:background="@drawable/mainbg"
+    android:background="@color/lightgreybg"
     tools:context=".NeetTest">
 
 
@@ -20,10 +20,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textAlignment="center"
-        android:background="@drawable/bluebutton"
+        android:background="@drawable/lightbluebg"
         android:gravity="center"
         android:textSize="28dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="modaltest1"/>
 
     <TextView
@@ -39,9 +39,9 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textAlignment="center"
         android:gravity="center"
-        android:background="@drawable/buttonbg"
+        android:background="@drawable/lightbluebg"
         android:textSize="28dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="neettest2"/>
 
     <TextView
@@ -57,9 +57,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         android:textAlignment="center"
         android:gravity="center"
-        android:background="@drawable/buttonbg"
+        android:background="@drawable/lightbluebg"
         android:textSize="28dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="neettest3"/>
 
     <TextView
@@ -75,9 +75,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         android:textAlignment="center"
         android:gravity="center"
-        android:background="@drawable/bluebutton"
+        android:background="@drawable/lightbluebg"
         android:textSize="28dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="neettest4"/>
 
     <TextView
@@ -93,9 +93,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         android:textAlignment="center"
         android:gravity="center"
-        android:background="@drawable/bluebutton"
+        android:background="@drawable/lightbluebg"
         android:textSize="28dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="neetttest5"
         />
 
@@ -112,7 +112,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         android:textAlignment="center"
         android:gravity="center"
-        android:background="@drawable/buttonbg"
+        android:background="@drawable/lightbluebg"
         android:textSize="28dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

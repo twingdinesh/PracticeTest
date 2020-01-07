@@ -24,18 +24,9 @@ public class NeetTest extends AppCompatActivity {
 
     public void alert()
     {
-        View view= LayoutInflater.from(NeetTest.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(NeetTest.this);
-        builder.setTitle("Start the modal test?").setView(view).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(NeetTest.this,MainActivity.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
-
+        Intent in=new Intent(NeetTest.this,alert.class);
+        NeetTest.this.finish();
+        startActivity(in);
     }
 
     public void onBackPressed()

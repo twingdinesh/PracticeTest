@@ -2,41 +2,91 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="200sp"
-    android:layout_height="400sp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-
-    tools:context=".alert">
+    tools:context=".alert"
+    android:background="@drawable/lightbluebg"
+    android:padding="8dp"
+    android:gravity="center_vertical">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="instructions:"
         android:textColor="@color/red"
-        android:textSize="17sp"
+        android:textSize="30dp"
+        android:layout_gravity="center"
         android:layout_marginBottom="6sp"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:textSize="20dp"
         android:text="1)you will gain 4 points for each correct answer"
+        android:textColor="@color/black"
         android:layout_marginBottom="4sp"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:textSize="20dp"
         android:text="2)you will deduct 1 point for each wrong answer"
+        android:textColor="@color/black"
         android:layout_marginBottom="4sp"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:textSize="20dp"
         android:text="3)once the test started you cannot stop it"
+        android:textColor="@color/black"
         android:layout_marginBottom="4sp"/>
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="4)maximum time to complete the test is 3 hours"
+        android:textColor="@color/black"
+        android:layout_marginBottom="4sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="4)maximum time to complete the test is 3 hours"
+        android:textColor="@color/black"
+        android:layout_marginBottom="4sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="5)if you click SURE button it will exclude for evalution"
+        android:textColor="@color/black"
+        android:layout_marginBottom="4sp"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="i have read all the instructions and ready for modal exam"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:text="All the best winners!"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="4sp"/>
+    <Button
+        android:id="@+id/startbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:text="4)maximum time to complete the test is 3 hours"
-        android:layout_marginBottom="4sp"/>
+        android:text="start"
+        android:onClick="start"
+        android:background="@drawable/lightbluebg"/>
+
+
 </LinearLayout>
