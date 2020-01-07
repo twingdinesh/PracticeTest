@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200sp"
+    android:layout_height="400sp"
+    android:orientation="vertical"
+
+    tools:context=".alert">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="instructions:"
+        android:textColor="@color/red"
+        android:textSize="17sp"
+        android:layout_marginBottom="6sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="1)you will gain 4 points for each correct answer"
+        android:layout_marginBottom="4sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="2)you will deduct 1 point for each wrong answer"
+        android:layout_marginBottom="4sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="3)once the test started you cannot stop it"
+        android:layout_marginBottom="4sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="4)maximum time to complete the test is 3 hours"
+        android:layout_marginBottom="4sp"/>
+</LinearLayout>

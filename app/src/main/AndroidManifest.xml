@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.practicetest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".neet1progress"></activity>
+        <activity android:name=".startActivity" />
+        <activity android:name=".jadvans5" />
+        <activity android:name=".jadvans4" />
+        <activity android:name=".jadvans3" />
+        <activity android:name=".jadvans2" />
+        <activity android:name=".jadvans1" />
+        <activity android:name=".jadvresult5" />
+        <activity android:name=".jadvresult4" />
+        <activity android:name=".jadvresult3" />
+        <activity android:name=".jadvresult2" />
+        <activity android:name=".jadvresult1" />
+        <activity android:name=".jadv5" />
+        <activity android:name=".jadv4" />
+        <activity android:name=".jadv3" />
+        <activity android:name=".jadv2" />
+        <activity android:name=".jadv1" />
+        <activity android:name=".jeeAdvanced" />
+        <activity android:name=".jmain5result" />
+        <activity android:name=".jmain4result" />
+        <activity android:name=".jmain3result" />
+        <activity android:name=".jmain2result" />
+        <activity android:name=".jmain1result" />
+        <activity android:name=".jmainans5" />
+        <activity android:name=".jmainans4" />
+        <activity android:name=".jmainans3" />
+        <activity android:name=".jmainans2" />
+        <activity android:name=".jmainans1" />
+        <activity android:name=".jmain5" />
+        <activity android:name=".jmain4" />
+        <activity android:name=".jmain3" />
+        <activity android:name=".jmain2" />
+        <activity android:name=".jmain1" />
+        <activity android:name=".jeemain" />
+        <activity android:name=".neetans5" />
+        <activity android:name=".neet5result" />
+        <activity android:name=".neettest5" />
+        <activity android:name=".neetans4" />
+        <activity android:name=".neet4result" />
+        <activity android:name=".neettest4" />
+        <activity android:name=".neet3result" />
+        <activity android:name=".neetans3" />
+        <activity android:name=".neettest3" />
+        <activity android:name=".neet2result" />
+        <activity android:name=".neetans2" />
+        <activity android:name=".neetest2" />
+        <activity android:name=".splashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".answer" />
+        <activity android:name=".alert" />
+        <activity android:name=".result" />
+        <activity android:name=".NeetTest" />
+    </application>
+
+</manifest>
