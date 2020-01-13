@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainbg"
+    android:background="@drawable/bluewall"
     android:padding="20dp"
     tools:context=".jeeAdvanced">
 
@@ -19,10 +19,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textAlignment="center"
-        android:background="@drawable/bluebutton"
+        android:background="@drawable/greywhitebg"
         android:gravity="center"
         android:textSize="28dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="modaltest1"/>
 
     <TextView
@@ -40,7 +40,7 @@
         android:gravity="center"
         android:background="@drawable/buttonbg"
         android:textSize="28dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="neettest2"/>
 
     <TextView
@@ -58,7 +58,7 @@
         android:gravity="center"
         android:background="@drawable/buttonbg"
         android:textSize="28dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="neettest3"/>
 
     <TextView
@@ -74,9 +74,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         android:textAlignment="center"
         android:gravity="center"
-        android:background="@drawable/bluebutton"
+        android:background="@drawable/greywhitebg"
         android:textSize="28dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="neettest4"/>
 
     <TextView
@@ -92,9 +92,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         android:textAlignment="center"
         android:gravity="center"
-        android:background="@drawable/bluebutton"
+        android:background="@drawable/greywhitebg"
         android:textSize="28dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="neetttest5"
         />
 
@@ -102,7 +102,7 @@
         android:id="@+id/textView8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Modal test 6"
+        android:text="marks history"
         android:fontFamily="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,8 +110,9 @@
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         android:textAlignment="center"
+        android:onClick="history"
         android:gravity="center"
         android:background="@drawable/buttonbg"
         android:textSize="28dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/red"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

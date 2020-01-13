@@ -7,29 +7,42 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class alert extends AppCompatActivity {
 
     CheckBox checkBox;
     Button startButton;
+    TextView wish;
+    EditText name;
+    public static String Name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alert);
         checkBox=(CheckBox)findViewById(R.id.checkBox);
         startButton=(Button)findViewById(R.id.startbutton);
+        wish=(TextView) findViewById(R.id.wish);
+        wish.setVisibility(View.INVISIBLE);
+        name=(EditText)findViewById(R.id.name);
+
+
 
 
     }
 
     public void start(View view) {
-        if(checkBox.isChecked()) {
+        Name=name.getText().toString();
+        wish.setVisibility(View.VISIBLE);
+        if(checkBox.isChecked()&&!Name.isEmpty()) {
+
             Intent in = new Intent(alert.this, MainActivity.class);
             alert.this.finish();
             startActivity(in);
         }
         else
-            Toast.makeText(alert.this,"agree to continue to test",Toast.LENGTH_SHORT).show();
+            Toast.makeText(alert.this,"Enter your name and agree to continue to test",Toast.LENGTH_SHORT).show();
     }
 }

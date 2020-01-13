@@ -6,7 +6,8 @@ public class questionlibrary {
             "The magnetic potential energy stored iin certain induction is 25MJ.when the current in the inductors is 60Ma.this inductors is of inductance",
             "An object is placed at a distance of 40cm towards the mirrors,the displacement of the image will be",
             "An em wave is proagating in a medium with a velocity V=Vi.The instantaneous oscillating electric field of this em wave is along +y axis.then the direction  of oscillating magnetic field of the em wave will be along",
-            "The refractivee index of the material of a prism is 2 and the angle of the prism is 30deg.One of the two refracting surface of the prism is made a mirror inwards,by silver coating.a beam of monochromatic light entering the prism from the other face will retrace its path(after reflection from the silvered surface)if its angle of incidence on the prism is"
+            "The refractivee index of the material of a prism is 2 and the angle of the prism is 30deg.One of the two refracting surface of the prism is made a mirror inwards,by silver coating.a beam of monochromatic light entering the prism from the other face will retrace its path(after reflection from the silvered surface)if its angle of incidence on the prism is",
+            "what is your name"
     };
 
     //here you can change the options in the order of the questions
@@ -15,10 +16,11 @@ public class questionlibrary {
             {"36 cm towards the mirror","30 cm away from the mirror","30 cm towards the mirror","36 cm away from the mirror"},
             {"-x direction","-z direction","-y direction","+z direction"},
             {"zero","60","30","45"},
+            {"hello","world","monkey","king"},
     };
     //please type exact correct answer you mentioned above in options without any change
     //here you should change the correct option according to that order
-    private String mCorrectAnswer[]={"1.389H","36 cm away from the mirror","-y direction","45"};
+    private String mCorrectAnswer[]={"1.389H","36 cm away from the mirror","-y direction","45","king"};
 
     public int length=mQuestions.length;
 

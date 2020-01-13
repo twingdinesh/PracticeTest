@@ -35,60 +35,34 @@ public class NeetTest extends AppCompatActivity {
     }
 
     public void neettest2(View view) {
-        View view2= LayoutInflater.from(NeetTest.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(NeetTest.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(NeetTest.this,neetest2.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(NeetTest.this,neet2alert.class);
+        NeetTest.this.finish();
+        startActivity(in);
 
     }
 
     public void neettest3(View view) {
-        View view2= LayoutInflater.from(NeetTest.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(NeetTest.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(NeetTest.this,neettest3.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(NeetTest.this,neet3alert.class);
+        NeetTest.this.finish();
+        startActivity(in);
 
     }
 
     public void neettest4(View view) {
-        View view2= LayoutInflater.from(NeetTest.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(NeetTest.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(NeetTest.this,neettest4.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(NeetTest.this,neet4alert.class);
+        NeetTest.this.finish();
+        startActivity(in);
     }
 
     public void neetttest5(View view) {
-        View view2= LayoutInflater.from(NeetTest.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(NeetTest.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(NeetTest.this,neettest5.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(NeetTest.this,neet5alert.class);
+        NeetTest.this.finish();
+        startActivity(in);
+    }
+
+    public void history(View view) {
+
+        Intent in=new Intent(this,neethistory.class);
+        startActivity(in);
     }
 }

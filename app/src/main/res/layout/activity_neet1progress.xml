@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/resultbg"
     tools:context=".neet1progress">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:text="your test report"
+        android:text="TEST REPORT"
+        android:textColor="@color/black"
         android:textSize="24sp"
+        android:fontFamily="monospace"
         app:layout_constraintBottom_toTopOf="@+id/report"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -27,6 +30,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:padding="25dp"
+        android:background="@drawable/strokeborder"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
@@ -40,5 +48,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         android:onClick="result"
+        android:padding="8dp"
+        android:background="@drawable/greywhitebg"
         app:layout_constraintTop_toBottomOf="@+id/report" />
 </androidx.constraintlayout.widget.ConstraintLayout>

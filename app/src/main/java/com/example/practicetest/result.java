@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class result extends AppCompatActivity {
-    MainActivity mainActivity=new MainActivity();
     questionlibrary questionlibrary=new questionlibrary();
+    MainActivity mainActivity=new MainActivity();
   private   TextView result,resQuesNo,resQues,correctans,yourans;
   private   Button next,prev;
   private   int quesno=0;
@@ -98,7 +98,7 @@ public class result extends AppCompatActivity {
         else
         {
             quesno++;
-            Toast.makeText(this,"finish",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"First question",Toast.LENGTH_SHORT).show();
             prev.setVisibility(View.INVISIBLE);
         }
     }

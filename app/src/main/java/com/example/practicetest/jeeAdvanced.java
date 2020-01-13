@@ -22,18 +22,9 @@ public class jeeAdvanced extends AppCompatActivity {
 
     public void alert()
     {
-        View view= LayoutInflater.from(jeeAdvanced.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(jeeAdvanced.this);
-        builder.setTitle("Start the modal test?").setView(view).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(jeeAdvanced.this,jadv1.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
-
+        Intent in=new Intent(jeeAdvanced.this,jadvalert1.class);
+        jeeAdvanced.this.finish();
+        startActivity(in);
     }
 
     public void onBackPressed()
@@ -42,60 +33,33 @@ public class jeeAdvanced extends AppCompatActivity {
     }
 
     public void neettest2(View view) {
-        View view2= LayoutInflater.from(jeeAdvanced.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(jeeAdvanced.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(jeeAdvanced.this,jadv2.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(jeeAdvanced.this,jadvalert2.class);
+        jeeAdvanced.this.finish();
+        startActivity(in);
 
     }
 
     public void neettest3(View view) {
-        View view2= LayoutInflater.from(jeeAdvanced.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(jeeAdvanced.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(jeeAdvanced.this,jadv3.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(jeeAdvanced.this,jadvalert3.class);
+        jeeAdvanced.this.finish();
+        startActivity(in);
 
     }
 
     public void neettest4(View view) {
-        View view2= LayoutInflater.from(jeeAdvanced.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(jeeAdvanced.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(jeeAdvanced.this,jadv4.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(jeeAdvanced.this,jadvalert4.class);
+        jeeAdvanced.this.finish();
+        startActivity(in);
     }
 
     public void neetttest5(View view) {
-        View view2= LayoutInflater.from(jeeAdvanced.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(jeeAdvanced.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(jeeAdvanced.this,jadv5.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(jeeAdvanced.this,jadvalert5.class);
+        jeeAdvanced.this.finish();
+        startActivity(in);
+    }
+    public void history(View view)
+    {
+        Intent in=new Intent(this,jadv1history.class);
+        startActivity(in);
     }
 }

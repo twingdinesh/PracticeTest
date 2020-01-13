@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainbg"
+    android:background="@drawable/progressbg"
     android:padding="5dp"
     tools:context=".jadvresult5">
 
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="12dp"
         android:fontFamily="monospace"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/resultQuestion"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/resultQuestionNo"
         android:textSize="13dp"
         android:fontFamily="monospace"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         />
 
     <TextView
@@ -47,21 +47,21 @@
         android:textAlignment="center"
         android:textSize="15dp"
         android:fontFamily="monospace"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/yourans"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:text="TextView"
+        android:fontFamily="monospace"
+        android:text="your ans"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correctans"
-        android:textAlignment="center"
-        android:textSize="15dp"
-        android:fontFamily="monospace"
-        android:textColor="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/correctans" />
     <Button
         android:id="@+id/next"
         android:layout_width="match_parent"
@@ -73,8 +73,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="15dp"
         android:fontFamily="monospace"
-        android:background="@drawable/bluebutton"
-        android:textColor="@color/white"/>
+        android:background="@drawable/greywhitebg"
+        android:textColor="@color/rose"/>
 
     <TextView
         android:id="@+id/result"
@@ -84,10 +84,24 @@
         android:fontFamily="monospace"
         android:text="your answer"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/prev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="monospace"
+        android:text="prev"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/rose"
+        android:background="@drawable/greywhitebg"
+        android:textSize="15dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

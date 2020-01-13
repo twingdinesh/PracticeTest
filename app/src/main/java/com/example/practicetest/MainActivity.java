@@ -20,14 +20,14 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
    private questionlibrary questionlibrary=new questionlibrary();
-   private TextView questionno,mquestionview,time;
+   private TextView questionno,mquestionview,time,remaining;
    private Button choice1,choice2,choice3,choice4,skip,finish,answerlater;
    private String manswer;
-   private int mquestionnumber=0,checklatecounter=0,num;
+   private int mquestionnumber=0,checklatecounter=0,num,remainques=1;
    public  int[] ans=new int[questionlibrary.length];
    public ArrayList<Integer> checklate=new ArrayList<Integer>();
    CountDownTimer count;
-    public static int attendedans=0,mscore=0,correctanswer=0,wronganswer=0,skipquestions=0,totalquestions;
+    public static int mscore=0,correctanswer=0,wronganswer=0,skipquestions=0,totalquestions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,18 +43,18 @@ public class MainActivity extends AppCompatActivity {
         skip=(Button)findViewById(R.id.skip);
         finish=(Button)findViewById(R.id.finish);
         answerlater=(Button)findViewById(R.id.answerlater);
-
+        remaining=(TextView)findViewById(R.id.remaining);
         updateQuestion();
         finish.setVisibility(View.INVISIBLE);
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                attendedans++;
                 useranswer(1);
                 choice1.setTextColor(getResources().getColor(R.color.black));
                 choice2.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
                 choice4.setVisibility(View.INVISIBLE);
+                remainques++;
 
                     choice1.postDelayed(new Runnable() {
                         @Override
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                             choice2.setVisibility(View.VISIBLE);
                             choice3.setVisibility(View.VISIBLE);
                             choice4.setVisibility(View.VISIBLE);
-                            choice1.setTextColor(getResources().getColor(R.color.white));
+                            choice1.setTextColor(getResources().getColor(R.color.red));
                             if (choice1.getText().equals(manswer)) {
                                 correctanswer++;
                                 mscore = mscore + 4;
@@ -80,16 +80,16 @@ public class MainActivity extends AppCompatActivity {
         choice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                attendedans++;
                 choice2.setTextColor(getResources().getColor(R.color.black));
                 choice1.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
                 choice4.setVisibility(View.INVISIBLE);
                 useranswer(2);
+                remainques++;
                 choice2.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        choice2.setTextColor(getResources().getColor(R.color.white));
+                        choice2.setTextColor(getResources().getColor(R.color.red));
                         choice1.setVisibility(View.VISIBLE);
                         choice3.setVisibility(View.VISIBLE);
                         choice4.setVisibility(View.VISIBLE);
@@ -114,19 +114,19 @@ public class MainActivity extends AppCompatActivity {
         choice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                attendedans++;
                 choice3.setTextColor(getResources().getColor(R.color.black));
                 useranswer(3);
                 choice2.setVisibility(View.INVISIBLE);
                 choice1.setVisibility(View.INVISIBLE);
                 choice4.setVisibility(View.INVISIBLE);
+                remainques++;
                     choice3.postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             choice2.setVisibility(View.VISIBLE);
                             choice1.setVisibility(View.VISIBLE);
                             choice4.setVisibility(View.VISIBLE);
-                            choice3.setTextColor(getResources().getColor(R.color.white));
+                            choice3.setTextColor(getResources().getColor(R.color.red));
                             if (choice3.getText() == manswer) {
                                 correctanswer++;
                                 mscore=mscore+4;
@@ -147,19 +147,19 @@ public class MainActivity extends AppCompatActivity {
         choice4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                attendedans++;
                 choice4.setTextColor(getResources().getColor(R.color.black));
                 useranswer(4);
                 choice2.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
                 choice1.setVisibility(View.INVISIBLE);
+                remainques++;
                 choice4.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         choice2.setVisibility(View.VISIBLE);
                         choice3.setVisibility(View.VISIBLE);
                         choice1.setVisibility(View.VISIBLE);
-                        choice4.setTextColor(getResources().getColor(R.color.white));
+                        choice4.setTextColor(getResources().getColor(R.color.red));
 
                         if (choice4.getText() == manswer) {
                             correctanswer++;
@@ -182,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 useranswer(0);
                 skipquestions++;
+                remainques++;
                 updateQuestion();
 
             }
@@ -259,6 +260,7 @@ public class MainActivity extends AppCompatActivity {
     private void updateQuestion() {
 
         if(mquestionnumber!=questionlibrary.length) {
+            remaining.setText("reamaining:"+(questionlibrary.length-remainques));
             questionno.setText("Question no:"+(mquestionnumber+1));
             mquestionview.setText(questionlibrary.getQuestions(mquestionnumber));
             choice1.setText(questionlibrary.getChoice1(mquestionnumber));
@@ -272,78 +274,141 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             if(checklate.size()!=0) {
-                while (checklatecounter != checklate.size()) {
                     checklate();
                     choice1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            ans[checklatecounter - 1] = 1;
-                            attendedans++;
-                            if (choice1.getText().equals(questionlibrary.getCorrectAnswer(num))) {
-                                correctanswer++;
-                                mscore = mscore + 4;
-                                checklate();
-                            } else {
-                                wronganswer++;
-                                mscore--;
-                                checklate();
-                            }
+                            remainques++;
+                            ans[num] = 1;
+                            choice1.setTextColor(getResources().getColor(R.color.black));
+                            choice2.setVisibility(View.INVISIBLE);
+                            choice3.setVisibility(View.INVISIBLE);
+                            choice4.setVisibility(View.INVISIBLE);
+                            choice1.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    choice2.setVisibility(View.VISIBLE);
+                                    choice3.setVisibility(View.VISIBLE);
+                                    choice4.setVisibility(View.VISIBLE);
+                                    choice1.setTextColor(getResources().getColor(R.color.red));
+
+                                    if (choice1.getText().equals(questionlibrary.getCorrectAnswer(num))) {
+                                        correctanswer++;
+                                        mscore = mscore + 4;
+                                        checklate();
+                                    } else {
+                                        wronganswer++;
+                                        mscore--;
+                                        checklate();
+                                    }
+                                }
+                            },200);
+
+
                         }
                     });
                     choice2.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            ans[checklatecounter - 1] = 2;
-                            attendedans++;
-                            if (choice2.getText().equals(questionlibrary.getCorrectAnswer(num))) {
-                                correctanswer++;
-                                mscore = mscore + 4;
-                                checklate();
-                            } else {
-                                wronganswer++;
-                                mscore--;
-                                checklate();
-                            }
+                            remainques++;
+                            ans[num] = 2;
+                            choice2.setTextColor(getResources().getColor(R.color.black));
+                            choice1.setVisibility(View.INVISIBLE);
+                            choice3.setVisibility(View.INVISIBLE);
+                            choice4.setVisibility(View.INVISIBLE);
+                            choice2.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    choice4.setVisibility(View.VISIBLE);
+                                    choice3.setVisibility(View.VISIBLE);
+                                    choice1.setVisibility(View.VISIBLE);
+                                    choice2.setTextColor(getResources().getColor(R.color.red));
+
+                                    if (choice2.getText().equals(questionlibrary.getCorrectAnswer(num))) {
+                                        correctanswer++;
+                                        mscore = mscore + 4;
+                                        checklate();
+                                    } else {
+                                        wronganswer++;
+                                        mscore--;
+                                        checklate();
+                                    }
+                                }
+                            },200);
+
                         }
                     });
                     choice3.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            ans[checklatecounter - 1] = 3;
-                            attendedans++;
-                            if (choice3.getText().equals(questionlibrary.getCorrectAnswer(num))) {
-                                correctanswer++;
-                                mscore = mscore + 4;
-                                checklate();
-                            } else {
-                                wronganswer++;
-                                mscore--;
-                                checklate();
-                            }
+                            remainques++;
+                            ans[num] = 3;
+                            choice3.setTextColor(getResources().getColor(R.color.black));
+                            choice2.setVisibility(View.INVISIBLE);
+                            choice1.setVisibility(View.INVISIBLE);
+                            choice4.setVisibility(View.INVISIBLE);
+                            choice3.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    choice2.setVisibility(View.VISIBLE);
+                                    choice4.setVisibility(View.VISIBLE);
+                                    choice1.setVisibility(View.VISIBLE);
+                                    choice3.setTextColor(getResources().getColor(R.color.red));
+
+                                    if (choice3.getText().equals(questionlibrary.getCorrectAnswer(num))) {
+                                        correctanswer++;
+                                        mscore = mscore + 4;
+                                        checklate();
+                                    } else {
+                                        wronganswer++;
+                                        mscore--;
+                                        checklate();
+                                    }
+                                }
+                            },200);
+
                         }
                     });
                     choice4.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            ans[checklatecounter - 1] = 4;
-                            attendedans++;
-                            if (choice4.getText().equals(questionlibrary.getCorrectAnswer(num))) {
-                                correctanswer++;
-                                mscore = mscore + 4;
-                                checklate();
-                            } else {
-                                wronganswer++;
-                                mscore--;
-                                checklate();
-                            }
+                            remainques++;
+                            ans[num] = 4;
+                            choice4.setTextColor(getResources().getColor(R.color.black));
+                            choice2.setVisibility(View.INVISIBLE);
+                            choice3.setVisibility(View.INVISIBLE);
+                            choice1.setVisibility(View.INVISIBLE);
+                            choice4.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    choice2.setVisibility(View.VISIBLE);
+                                    choice3.setVisibility(View.VISIBLE);
+                                    choice1.setVisibility(View.VISIBLE);
+                                    choice4.setTextColor(getResources().getColor(R.color.red));
+
+                                    if (choice4.getText().equals(questionlibrary.getCorrectAnswer(num))) {
+                                        correctanswer++;
+                                        mscore = mscore + 4;
+                                        checklate();
+                                    } else {
+                                        wronganswer++;
+                                        mscore--;
+                                        checklate();
+                                    }
+                                }
+                            },200);
+
                         }
                     });
 
-                }
+
             }
             else
-            {
+            {   remaining.setVisibility(View.INVISIBLE);
                 finish.setVisibility(View.VISIBLE);
+                time.setVisibility(View.INVISIBLE);
+                skip.setVisibility(View.INVISIBLE);
+                answerlater.setVisibility(View.INVISIBLE);
                 questionno.setVisibility(View.INVISIBLE);
                 mquestionview.setVisibility(View.INVISIBLE);
                 choice1.setVisibility(View.INVISIBLE);
@@ -358,7 +423,6 @@ public class MainActivity extends AppCompatActivity {
     public void useranswer(int a)
     {
         ans[mquestionnumber-1]=a;
-        attendedans++;
 
     }
     @Override
@@ -383,6 +447,7 @@ public class MainActivity extends AppCompatActivity {
             Integer integer = new Integer(checklate.get(checklatecounter));
             num = integer.intValue();
             questionno.setText("Question no:" + (num + 1));
+            remaining.setText("reamaining:"+(questionlibrary.length-remainques));
             mquestionview.setText(questionlibrary.getQuestions(num));
             choice1.setText(questionlibrary.getChoice1(num));
             choice2.setText(questionlibrary.getChoice2(num));
@@ -391,10 +456,13 @@ public class MainActivity extends AppCompatActivity {
             checklatecounter++;
             if(checklatecounter!=checklate.size())
                 answerlater.setVisibility(View.INVISIBLE);
-        }
-        else
-        {
+         }
+        else {
+            remaining.setVisibility(View.INVISIBLE);
             finish.setVisibility(View.VISIBLE);
+            skip.setVisibility(View.INVISIBLE);
+            time.setVisibility(View.INVISIBLE);
+            answerlater.setVisibility(View.INVISIBLE);
             questionno.setVisibility(View.INVISIBLE);
             mquestionview.setVisibility(View.INVISIBLE);
             choice1.setVisibility(View.INVISIBLE);
@@ -402,6 +470,7 @@ public class MainActivity extends AppCompatActivity {
             choice3.setVisibility(View.INVISIBLE);
             choice4.setVisibility(View.INVISIBLE);
         }
+
 
     }
 

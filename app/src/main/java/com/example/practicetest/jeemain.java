@@ -22,18 +22,9 @@ public class jeemain extends AppCompatActivity {
 
     public void alert()
     {
-        View view= LayoutInflater.from(jeemain.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(jeemain.this);
-        builder.setTitle("Start the modal test?").setView(view).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(jeemain.this,jmain1.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
-
+        Intent in=new Intent(jeemain.this,jmainalert1.class);
+        jeemain.this.finish();
+        startActivity(in);
     }
 
     public void onBackPressed()
@@ -42,60 +33,33 @@ public class jeemain extends AppCompatActivity {
     }
 
     public void neettest2(View view) {
-        View view2= LayoutInflater.from(jeemain.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(jeemain.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(jeemain.this,jmain2.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(jeemain.this,jmainalert2.class);
+        jeemain.this.finish();
+        startActivity(in);
 
     }
 
     public void neettest3(View view) {
-        View view2= LayoutInflater.from(jeemain.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(jeemain.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(jeemain.this,jmain3.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(jeemain.this,jmainalert3.class);
+        jeemain.this.finish();
+        startActivity(in);
 
     }
 
     public void neettest4(View view) {
-        View view2= LayoutInflater.from(jeemain.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(jeemain.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(jeemain.this,jmain4.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(jeemain.this,jmainalert4.class);
+        jeemain.this.finish();
+        startActivity(in);
     }
 
     public void neetttest5(View view) {
-        View view2= LayoutInflater.from(jeemain.this).inflate(R.layout.activity_alert,null);
-        AlertDialog.Builder builder=new AlertDialog.Builder(jeemain.this);
-        builder.setTitle("Star the modal test?").setView(view2).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent in=new Intent(jeemain.this,jmain5.class);
-                startActivity(in);
-            }
-        }).setNegativeButton("no",null).setCancelable(false);
-        AlertDialog alert=builder.create();
-        alert.show();
+        Intent in=new Intent(jeemain.this,jmainalert5.class);
+        jeemain.this.finish();
+        startActivity(in);
+    }
+
+    public void history(View view) {
+        Intent in=new Intent(this,jeemainhistory.class);
+        startActivity(in);
     }
 }

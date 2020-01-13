@@ -4,11 +4,15 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="dines">#444444</color>
+    <color name="grey" >#e9eaf5</color>
+    <color name="grey2">#b3a98f</color>
     <color name="red">#e31728</color>
     <color name="white">#ffffff</color>
     <color name="black">#0a0a0a</color>
     <color name="green">#0af52d</color>
     <color name="rose">#f507ae</color>
-    <color name="lightgreybg">#dce3de</color>
-    <color name="lightblue">#8de3f2</color>
+    <color name="lightgreybg">#f0f2f2</color>
+    <color name="lightblue">#99f2f2</color>
+    <color name="background">#faeee3</color>
+    <color name="foreground">#d7dcfa</color>
 </resources>
