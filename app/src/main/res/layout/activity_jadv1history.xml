@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/bluewall"
+    android:background="@color/grey"
     tools:context=".jadv1history">
     <TextView
         android:id="@+id/marks"
@@ -27,7 +27,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/greywhitebg"
+        android:background="@drawable/buttonskip"
         android:onClick="clear"
         android:padding="8dp"
         android:text="clear"

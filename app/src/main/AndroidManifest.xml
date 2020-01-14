@@ -98,6 +98,10 @@
         <activity android:name=".alert" />
         <activity android:name=".result" />
         <activity android:name=".NeetTest" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

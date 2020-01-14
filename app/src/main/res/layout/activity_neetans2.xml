@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/black"
         android:textSize="14dp"
-        android:fontFamily="monospace"/>
+        android:fontFamily="@font/basic"/>
 
     <TextView
         android:id="@+id/ansQuestion"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ansQuestionNo"
         android:textColor="@color/black"
         android:textSize="13dp"
-        android:fontFamily="monospace"/>
+        android:fontFamily="@font/basic"/>
 
     <TextView
         android:id="@+id/anscorrectans"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ansQuestion"
         android:textColor="@color/black"
         android:textSize="13sp"
-        android:fontFamily="monospace"
+        android:fontFamily="@font/basic"
         android:textAlignment="center"
         />
 
@@ -78,4 +78,5 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

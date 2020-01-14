@@ -15,4 +15,5 @@
     <color name="lightblue">#99f2f2</color>
     <color name="background">#faeee3</color>
     <color name="foreground">#d7dcfa</color>
+    <color name="maincolorbg">#d1cdcd</color>
 </resources>
