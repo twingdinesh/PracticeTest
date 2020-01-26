@@ -8,6 +8,7 @@
     android:background="@color/maincolorbg"
     tools:context=".neetest2">
 
+
     <TextView
         android:id="@+id/time"
         android:layout_width="match_parent"
@@ -18,8 +19,10 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/questionnum"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/questionnum"
@@ -43,12 +46,14 @@
         android:text="TextView"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/choice1"
-        app:layout_constraintTop_toBottomOf="@+id/questionnum"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionnum" />
 
     <Button
         android:id="@+id/choice4"
-        android:layout_width="match_parent"
+        android:layout_width="391dp"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonskip"
         android:fontFamily="@font/basic"
@@ -57,8 +62,10 @@
         android:textAllCaps="false"
         android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choice3"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice3" />
 
     <Button
         android:id="@+id/choice3"
@@ -71,8 +78,9 @@
         android:textAllCaps="false"
         android:textColor="@color/red"
         app:layout_constraintBottom_toTopOf="@+id/choice4"
-        app:layout_constraintTop_toBottomOf="@+id/choice2"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice2" />
 
     <Button
         android:id="@+id/choice2"
@@ -85,8 +93,9 @@
         android:textAllCaps="false"
         android:textColor="@color/red"
         app:layout_constraintBottom_toTopOf="@+id/choice3"
-        app:layout_constraintTop_toBottomOf="@+id/choice1"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice1" />
 
     <Button
         android:id="@+id/choice1"
@@ -99,8 +108,9 @@
         android:textAllCaps="false"
         android:textColor="@color/red"
         app:layout_constraintBottom_toTopOf="@+id/choice2"
-        app:layout_constraintTop_toBottomOf="@+id/question"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
 
     <Button
         android:id="@+id/skip"
@@ -146,12 +156,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:textColor="@color/black"
         android:text="Remaining:2"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/question"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/questionnum"
         app:layout_constraintTop_toBottomOf="@+id/time" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

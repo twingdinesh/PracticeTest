@@ -2,30 +2,32 @@ package com.example.practicetest;
 
 public class questionlibrary {
     //here you can change the questions in order
-    public  String mQuestions[]={
-            "The magnetic potential energy stored iin certain induction is 25MJ.when the current in the inductors is 60Ma.this inductors is of inductance",
-            "An object is placed at a distance of 40cm towards the mirrors,the displacement of the image will be",
-            "An em wave is proagating in a medium with a velocity V=Vi.The instantaneous oscillating electric field of this em wave is along +y axis.then the direction  of oscillating magnetic field of the em wave will be along",
-            "The refractivee index of the material of a prism is 2 and the angle of the prism is 30deg.One of the two refracting surface of the prism is made a mirror inwards,by silver coating.a beam of monochromatic light entering the prism from the other face will retrace its path(after reflection from the silvered surface)if its angle of incidence on the prism is",
-            "what is your name"
+    public  int mQuestions[]={
+            R.drawable.neetone1,R.drawable.neetone2,R.drawable.neetone3,R.drawable.neetone4,R.drawable.neetone5,R.drawable.neetone6,R.drawable.neetone7,R.drawable.neetone8,R.drawable.neetone9,R.drawable.neetone10,R.drawable.neetone11,R.drawable.neetone12,R.drawable.neetone13,R.drawable.neetone14,R.drawable.neetone15,
+            R.drawable.neetone16,R.drawable.neetone17,R.drawable.neetone18,R.drawable.neetone19,R.drawable.neetone20,R.drawable.neetone21,R.drawable.neetone22,R.drawable.neetone23,R.drawable.neetone24,R.drawable.neetone25,R.drawable.neetone26,R.drawable.neetone27,R.drawable.neetone28,R.drawable.neetone29,R.drawable.neetone30,
+            R.drawable.neetone31,R.drawable.neetone32,R.drawable.qneetone33,R.drawable.neetone34,R.drawable.neetone35,R.drawable.neetone36,R.drawable.neetone37,R.drawable.neetone38,R.drawable.neetone39,R.drawable.neetone40,R.drawable.neetone41,R.drawable.neetone42,R.drawable.neetone43,R.drawable.neetone44,R.drawable.neetone45,
     };
 
     //here you can change the options in the order of the questions
     private String mchoice[][]={
-            {"13.89H","0.138H","1.389H","138.88"},
-            {"36 cm towards the mirror","30 cm away from the mirror","30 cm towards the mirror","36 cm away from the mirror"},
-            {"-x direction","-z direction","-y direction","+z direction"},
-            {"zero","60","30","45"},
-            {"hello","world","monkey","king"},
-    };
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+};
     //please type exact correct answer you mentioned above in options without any change
     //here you should change the correct option according to that order
-    private String mCorrectAnswer[]={"1.389H","36 cm away from the mirror","-y direction","45","king"};
+    private String mCorrectAnswer[]={
+            "3","3","2","1","4","3","4","2","1","4","4","1","3","2","1","3","4","1","2","3",
+            "1","3","4","1","1","3","1","4","2","2","4","2","1","4","4","3","1","4","1","4","3","4","2",
+            "1","2", "1", "4","4"};
+
 
     public int length=mQuestions.length;
 
-   public String getQuestions(int a){
-        String question=mQuestions[a];
+   public int getQuestions(int a){
+        int question=mQuestions[a];
         return question;
     }
    public String getChoice1(int a){

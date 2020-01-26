@@ -47,7 +47,9 @@ public class startActivity extends AppCompatActivity {
     }
 
     public void jeeadvance(View view) {
-        Intent in=new Intent(startActivity.this,jeeAdvanced.class);
+//        Intent in=new Intent(startActivity.this,jeeAdvanced.class);
+//        startActivity(in);
+        Intent in=new Intent(startActivity.this,nextupdate.class);
         startActivity(in);
     }
 }

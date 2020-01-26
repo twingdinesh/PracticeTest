@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class jmain2 extends AppCompatActivity {
     private TextView questionno,mquestionview,time,remaining;
     private Button choice1,choice2,choice3,choice4,skip,finish,answerlater;
     private String manswer;
+    private ImageView quesimg;
     private int mquestionnumber=0,checklatecounter=0,num,remainques=1;
     public  int[] ans=new int[questionlibrary.length];
     public ArrayList<Integer> checklate=new ArrayList<Integer>();
@@ -28,7 +30,7 @@ public class jmain2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jmain2);
         questionno=(TextView)findViewById(R.id.questionnum);
-        mquestionview = (TextView) findViewById(R.id.question);
+        quesimg=(ImageView)findViewById(R.id.quesimg);
         time=(TextView)findViewById(R.id.time);
         choice1 = (Button) findViewById(R.id.choice1);
         choice2 = (Button) findViewById(R.id.choice2);
@@ -257,7 +259,7 @@ public class jmain2 extends AppCompatActivity {
         if(mquestionnumber!=questionlibrary.length) {
             remaining.setText("reamaining:"+(questionlibrary.length-remainques));
             questionno.setText("Question no:"+(mquestionnumber+1));
-            mquestionview.setText(questionlibrary.getQuestions(mquestionnumber));
+            quesimg.setImageResource(questionlibrary.getQuestions(mquestionnumber));
             choice1.setText(questionlibrary.getChoice1(mquestionnumber));
             choice2.setText(questionlibrary.getChoice2(mquestionnumber));
             choice3.setText(questionlibrary.getChoice3(mquestionnumber));
@@ -406,7 +408,7 @@ public class jmain2 extends AppCompatActivity {
                 skip.setVisibility(View.INVISIBLE);
                 answerlater.setVisibility(View.INVISIBLE);
                 questionno.setVisibility(View.INVISIBLE);
-                mquestionview.setVisibility(View.INVISIBLE);
+                quesimg.setVisibility(View.INVISIBLE);
                 choice1.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
@@ -428,7 +430,6 @@ public class jmain2 extends AppCompatActivity {
         builder.setTitle("quit test?").setMessage("are you sure you want to quit the test?").setPositiveButton("yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-//                Intent in=new Intent(MainActivity.this,answer.class);
                 jmain2.this.finish();
                 startActivity(new Intent(jmain2.this,jmainans2.class));
             }
@@ -444,7 +445,7 @@ public class jmain2 extends AppCompatActivity {
             Integer integer = new Integer(checklate.get(checklatecounter));
             num = integer.intValue();
             questionno.setText("Question no:" + (num + 1));
-            mquestionview.setText(questionlibrary.getQuestions(num));
+            quesimg.setImageResource(questionlibrary.getQuestions(checklatecounter));
             choice1.setText(questionlibrary.getChoice1(num));
             choice2.setText(questionlibrary.getChoice2(num));
             choice3.setText(questionlibrary.getChoice3(num));
@@ -455,12 +456,12 @@ public class jmain2 extends AppCompatActivity {
         }
         else {
             remaining.setVisibility(View.INVISIBLE);
+            quesimg.setVisibility(View.INVISIBLE);
             finish.setVisibility(View.VISIBLE);
             skip.setVisibility(View.INVISIBLE);
             time.setVisibility(View.INVISIBLE);
             answerlater.setVisibility(View.INVISIBLE);
             questionno.setVisibility(View.INVISIBLE);
-            mquestionview.setVisibility(View.INVISIBLE);
             choice1.setVisibility(View.INVISIBLE);
             choice2.setVisibility(View.INVISIBLE);
             choice3.setVisibility(View.INVISIBLE);

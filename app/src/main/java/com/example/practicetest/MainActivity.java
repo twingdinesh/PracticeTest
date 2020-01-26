@@ -3,14 +3,19 @@ package com.example.practicetest;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.IBinder;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,22 +25,30 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
    private questionlibrary questionlibrary=new questionlibrary();
-   private TextView questionno,mquestionview,time,remaining;
+   private ImageView bookmarkimage,quesimg;
+   private TextView questionno,time,remaining;
    private Button choice1,choice2,choice3,choice4,skip,finish,answerlater;
    private String manswer;
    private int mquestionnumber=0,checklatecounter=0,num,remainques=1;
    public  int[] ans=new int[questionlibrary.length];
    public ArrayList<Integer> checklate=new ArrayList<Integer>();
+   public String bookmark;
+   public int bookquesno=1;
+   SharedPreferences sharedPreferences;
+   StringBuffer buffer=new StringBuffer();
    CountDownTimer count;
     public static int mscore=0,correctanswer=0,wronganswer=0,skipquestions=0,totalquestions;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         questionno=(TextView)findViewById(R.id.questionnum);
-        mquestionview = (TextView) findViewById(R.id.question);
         time=(TextView)findViewById(R.id.time);
+        quesimg=(ImageView)findViewById(R.id.quesimg);
+        bookmarkimage=(ImageView)findViewById(R.id.imageView);
         choice1 = (Button) findViewById(R.id.choice1);
         choice2 = (Button) findViewById(R.id.choice2);
         choice3 = (Button) findViewById(R.id.choice3);
@@ -45,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         answerlater=(Button)findViewById(R.id.answerlater);
         remaining=(TextView)findViewById(R.id.remaining);
         updateQuestion();
+        bookmarkimage.setColorFilter(getResources().getColor(R.color.black));
         finish.setVisibility(View.INVISIBLE);
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -248,6 +262,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void finishtest() {
+        bookmark=buffer.toString();
+        sharedPreferences=getSharedPreferences("bookmark",MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putString("questions",bookmark);
+        editor.apply();
         Intent intent=new Intent(MainActivity.this,neet1progress.class);
         Bundle bundle=new Bundle();
         bundle.putIntArray("youranswer",ans);
@@ -257,12 +276,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void updateQuestion() {
 
-        if(mquestionnumber!=questionlibrary.length) {
+    private void updateQuestion() {
+        bookmarkimage.setColorFilter(getResources().getColor(R.color.white));
+        if(mquestionnumber!=questionlibrary.length)
+        {
+
             remaining.setText("reamaining:"+(questionlibrary.length-remainques));
             questionno.setText("Question no:"+(mquestionnumber+1));
-            mquestionview.setText(questionlibrary.getQuestions(mquestionnumber));
+            quesimg.setImageResource(questionlibrary.getQuestions(mquestionnumber));
             choice1.setText(questionlibrary.getChoice1(mquestionnumber));
             choice2.setText(questionlibrary.getChoice2(mquestionnumber));
             choice3.setText(questionlibrary.getChoice3(mquestionnumber));
@@ -404,13 +426,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
             else
-            {   remaining.setVisibility(View.INVISIBLE);
+
+            {
+
+                bookmarkimage.setVisibility(View.INVISIBLE);
+                remaining.setVisibility(View.INVISIBLE);
                 finish.setVisibility(View.VISIBLE);
                 time.setVisibility(View.INVISIBLE);
                 skip.setVisibility(View.INVISIBLE);
                 answerlater.setVisibility(View.INVISIBLE);
                 questionno.setVisibility(View.INVISIBLE);
-                mquestionview.setVisibility(View.INVISIBLE);
+                quesimg.setVisibility(View.INVISIBLE);
                 choice1.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
@@ -448,7 +474,7 @@ public class MainActivity extends AppCompatActivity {
             num = integer.intValue();
             questionno.setText("Question no:" + (num + 1));
             remaining.setText("reamaining:"+(questionlibrary.length-remainques));
-            mquestionview.setText(questionlibrary.getQuestions(num));
+            quesimg.setImageResource(questionlibrary.getQuestions(checklatecounter));
             choice1.setText(questionlibrary.getChoice1(num));
             choice2.setText(questionlibrary.getChoice2(num));
             choice3.setText(questionlibrary.getChoice3(num));
@@ -464,7 +490,7 @@ public class MainActivity extends AppCompatActivity {
             time.setVisibility(View.INVISIBLE);
             answerlater.setVisibility(View.INVISIBLE);
             questionno.setVisibility(View.INVISIBLE);
-            mquestionview.setVisibility(View.INVISIBLE);
+            quesimg.setVisibility(View.INVISIBLE);
             choice1.setVisibility(View.INVISIBLE);
             choice2.setVisibility(View.INVISIBLE);
             choice3.setVisibility(View.INVISIBLE);
@@ -474,4 +500,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void bookmark(View view) {
+
+//        String bmquestion=mquestionview.getText().toString();
+//        String answer=manswer;
+//        buffer.append("\n"+bookquesno+" "+bmquestion+"\n\n Answer :"+answer+"\n\n");
+//        bookquesno++;
+        bookmarkimage.setColorFilter(getResources().getColor(R.color.white));
+        Toast.makeText(this,"will be available in next update",Toast.LENGTH_SHORT).show();
+    }
 }

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">EntranceTest</string>
     <string name="actname">neettestone</string>
+    <string name="squrare"><sup>2</sup></string>
 </resources>

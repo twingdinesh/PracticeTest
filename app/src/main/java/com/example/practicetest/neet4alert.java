@@ -31,18 +31,18 @@ public class neet4alert extends AppCompatActivity {
 
 
 
+
     }
 
     public void start(View view) {
         Name=name.getText().toString();
         wish.setVisibility(View.VISIBLE);
         if(checkBox.isChecked()&&!Name.isEmpty()) {
-            Intent in = new Intent(neet4alert.this,neettest5.class);
+            Intent in = new Intent(neet4alert.this, neettest4.class);
             neet4alert.this.finish();
             startActivity(in);
         }
         else
             Toast.makeText(neet4alert.this,"Enter your name and agree to continue to test",Toast.LENGTH_SHORT).show();
-
     }
 }

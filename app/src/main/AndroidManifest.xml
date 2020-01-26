@@ -9,7 +9,10 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".neethistory"></activity>
+        <activity android:name=".jeemainbookmark"></activity>
+        <activity android:name=".nextupdate" />
+        <activity android:name=".neetbookmark" />
+        <activity android:name=".neethistory" />
         <activity android:name=".jeemainhistory" />
         <activity android:name=".jadv1history" />
         <activity android:name=".jadvprogress5" />
@@ -73,7 +76,8 @@
         <activity android:name=".jmain3" />
         <activity android:name=".jmain2" />
         <activity android:name=".jmain1" />
-        <activity android:name=".jeemain" />
+        <activity android:name=".jeemain"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity android:name=".neetans5" />
         <activity android:name=".neet5result" />
         <activity android:name=".neettest5" />
@@ -97,7 +101,9 @@
         <activity android:name=".answer" />
         <activity android:name=".alert" />
         <activity android:name=".result" />
-        <activity android:name=".NeetTest" />
+        <activity
+            android:name=".NeetTest"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"

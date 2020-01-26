@@ -27,7 +27,6 @@ public class jmainprogress1 extends AppCompatActivity {
         report=(TextView)findViewById(R.id.report);
         save=(Button)findViewById(R.id.save);
         report.setText("Name: "+alert.Name+"\n"+"marks awarded: "+mainActivity.mscore+"\n"+"total questions: "+mainActivity.totalquestions+"\n"+"correct answers: "+mainActivity.correctanswer+"\n"+"wrong answers: "+mainActivity.wronganswer+"\n"+"skipped answer :"+mainActivity.skipquestions);
-
         Bundle bundle=getIntent().getExtras();
         youranswer=bundle.getIntArray("youranswer");
 

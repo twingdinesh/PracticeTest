@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class jmain1result extends AppCompatActivity {
     jeemainquestionlibrary1 questionlibrary=new jeemainquestionlibrary1();
     jmain1 mainActivity=new jmain1();
+    private ImageView quesimg;
     private   TextView result,resQuesNo,resQues,correctans,yourans;
     private   Button next,prev;
     private   int quesno=0;
@@ -26,6 +28,7 @@ public class jmain1result extends AppCompatActivity {
         yourans=(TextView)findViewById(R.id.yourans);
         next=(Button)findViewById(R.id.next);
         prev=(Button)findViewById(R.id.prev);
+        quesimg=(ImageView)findViewById(R.id.imgques);
         prev.setVisibility(View.INVISIBLE);
         Bundle bundle=getIntent().getExtras();
         result.setText("your score is:"+mainActivity.mscore);
@@ -54,8 +57,11 @@ public class jmain1result extends AppCompatActivity {
     public void updateQuestion()
     {
         if(quesno!=questionlibrary.length) {
+
+
+
             resQuesNo.setText("question no:" +(quesno + 1));
-            resQues.setText(questionlibrary.getQuestions(quesno));
+            quesimg.setImageResource(questionlibrary.getQuestions(quesno));
             correctans.setText("correct ans:"+questionlibrary.getCorrectAnswer(quesno));
             if(youransw[quesno]==1)
                 yourans.setText("your ans :"+questionlibrary.getChoice1(quesno));
@@ -71,6 +77,7 @@ public class jmain1result extends AppCompatActivity {
         }
         else
         {
+
             quesno--;
             Toast.makeText(this,"finish",Toast.LENGTH_SHORT).show();
             next.setVisibility(View.INVISIBLE);
@@ -81,8 +88,10 @@ public class jmain1result extends AppCompatActivity {
     {
         quesno--;
         if(quesno>=0) {
+
+
             resQuesNo.setText("question no:" +(quesno + 1));
-            resQues.setText(questionlibrary.getQuestions(quesno));
+            quesimg.setImageResource(questionlibrary.getQuestions(quesno));
             correctans.setText("correct ans:"+questionlibrary.getCorrectAnswer(quesno));
             if(youransw[quesno]==1)
                 yourans.setText("your ans :"+questionlibrary.getChoice1(quesno));

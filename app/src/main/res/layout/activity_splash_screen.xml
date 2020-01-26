@@ -5,19 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bluewall"
+    android:background="@drawable/bgblur"
     android:gravity="center"
     tools:context=".splashScreen">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="450sp"
-        android:src="@drawable/icon"/>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
+    <TextView
+        android:id="@+id/text4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:text="A creation of"
+        android:textColor="@color/black"
+        android:fontFamily="@font/averia_libre_light"
+        android:gravity="center"/>
 
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="SELLTOG ONLINE PRIVATE LIMITED"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Education for Everyone"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:fontFamily="@font/averia_libre_light"/>
+
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:padding="10dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/averia_libre_light"
+        android:onClick="open"
+        android:text="Start to Explore"
+        android:textAllCaps="false"
+        android:textColor="#ffffff" />
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/averia_libre_light"
+        android:text="Twing"
+        android:textColor="#000000" />
 </LinearLayout>

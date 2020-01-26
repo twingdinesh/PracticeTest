@@ -3,6 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/actor</item>
         <item>@font/asap</item>
+        <item>@font/averia_libre_light</item>
         <item>@font/unna</item>
     </array>
 </resources>

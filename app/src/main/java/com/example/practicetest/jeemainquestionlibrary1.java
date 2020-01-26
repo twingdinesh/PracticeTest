@@ -1,29 +1,34 @@
 package com.example.practicetest;
 //you can fill jeemain modal test 1
 public class jeemainquestionlibrary1 {
-    //here you can change the questions in order
-    private String mQuestions[]={
-            "jee main 1 The magnetic potential energy stored iin certain induction is 25MJ.when the current in the inductors is 60Ma.this inductors is of inductance",
-            "An object is placed at a distance of 40cm towards the mirrors,the displacement of the image will be",
-            "An em wave is proagating in a medium with a velocity V=Vi.The instantaneous oscillating electric field of this em wave is along +y axis.then the direction  of oscillating magnetic field of the em wave will be along",
-            "The refractivee index of the material of a prism is 2 and the angle of the prism is 30deg.One of the two refracting surface of the prism is made a mirror inwards,by silver coating.a beam of monochromatic light entering the prism from the other face will retrace its path(after reflection from the silvered surface)if its angle of incidence on the prism is"
-    };
 
-    //here you can change the options in the order of the questions
+    private int imageues[]={R.drawable.jmone1,R.drawable.jmone2,R.drawable.jmone3,R.drawable.jmone4,R.drawable.jmone5,R.drawable.jmone6,R.drawable.jmone7,R.drawable.jmone8,R.drawable.jmone9,R.drawable.jmone10,R.drawable.jmone11,R.drawable.jmone12,R.drawable.jmone13,R.drawable.jmone14,R.drawable.jmone15,R.drawable.jmone16,R.drawable.jmone17,R.drawable.jmone18,R.drawable.jmone19,R.drawable.jmone20,
+                        R.drawable.jmone21,R.drawable.jmone22,R.drawable.jmone23,R.drawable.jmone24,R.drawable.jmone25,R.drawable.jmone26,R.drawable.jmone27,R.drawable.jmone28,R.drawable.jmone29,R.drawable.jmone30,R.drawable.jmone31,R.drawable.jmone32,R.drawable.jmone33,R.drawable.jmone34,R.drawable.jmone35,R.drawable.jmone36,R.drawable.jmone37,R.drawable.jmone38,R.drawable.jmone39,R.drawable.jmone40,
+                        R.drawable.jmone41,R.drawable.jmone42,R.drawable.jmone43,R.drawable.jmone44,R.drawable.jmone45,R.drawable.jmone46,R.drawable.jmone47,R.drawable.jmone48,R.drawable.jmone49,R.drawable.jmone50,R.drawable.jmone51,R.drawable.jmone52,R.drawable.jmone53,R.drawable.jmone54,R.drawable.jmone55,R.drawable.jmone56,R.drawable.jmone57,R.drawable.jmone58,R.drawable.jmone59,R.drawable.jmone60,
+                        R.drawable.jmone61,R.drawable.jmone62,R.drawable.jmone63,R.drawable.jmone64,R.drawable.jmone65,R.drawable.jmone66,R.drawable.jmone67,R.drawable.jmone68,R.drawable.jmone69,R.drawable.jmone70,R.drawable.jmone71,R.drawable.jmone72,R.drawable.jmone73,R.drawable.jmone74,R.drawable.jmone75,};
     private String mchoice[][]={
-            {"13.89H","0.138H","1.389H","138.88"},
-            {"36 cm towards the mirror","30 cm away from the mirror","30 cm towards the mirror","36 cm away from the mirror"},
-            {"-x direction","-z direction","-y direction","+z direction"},
-            {"zero","60","30","45"},
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+            {"7","3","1","9","4"},{"4.36","1.70","2.70","9.70"},{"3","4","5","2"},{"0.12","1.12","6.56","3.66"},{"1","2","7","5"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"2","3","5","6"},{"88","45","54","78"},{"40","50","32","34"},{"1.32","0.16","8.23","5.23"},{"5","4","3","2"},
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+            {"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},{"1","2","3","4"},
+            {"53","2","33","54"},{"13","24","64","34"},{"21","38","43","433"},{"1.5","2.3","3.3","4.5"},{"1","2","3","4"},
     };
     //please type exact correct answer you mentioned above in options without any change
     //here you should change the correct option according to that order
-    private String mCorrectAnswer[]={"1.389H","36 cm away from the mirror","-y direction","45"};
+    private String mCorrectAnswer[]={
+    "4","2","1","1","2","2","2","1","4","4","1","2","1","1","3","3","1","1","3","1",
+    "9","1.70","4","0.12","5","1","1","3","3","2","2","2","2","2","3","3","1","4","2", "1",
+            "3","4","2","2","1","3","88","50","0.16","3","3","1","3","4","3","2","4","3","3", "4",
+            "4","4","3","3","4","4","3","2","1","3","53","64","38","4.5","1"};
 
-    public int length=mQuestions.length;
 
-    public String getQuestions(int a){
-        String question=mQuestions[a];
+    public int length=imageues.length;
+
+    public int getQuestions(int a){
+        int question=imageues[a];
         return question;
     }
     public String getChoice1(int a){

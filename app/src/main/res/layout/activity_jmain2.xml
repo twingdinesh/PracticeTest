@@ -4,51 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:padding="5dp"
-    android:background="@color/maincolorbg"
     tools:context=".jmain2">
 
     <TextView
+        android:id="@+id/remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remaining:2"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/time" />
+
+    <TextView
+        android:id="@+id/questionnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="question no: 1"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/time"
+        app:layout_constraintEnd_toStartOf="@+id/time"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/time"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/basic"
         android:text="00:00:00"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/questionnum"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="5dp" />
-
-    <TextView
-        android:id="@+id/questionnum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:text="question no: 1"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/question"
+        app:layout_constraintBottom_toTopOf="@+id/quesimg"
         app:layout_constraintEnd_toStartOf="@+id/remaining"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time" />
-
-    <TextView
-        android:id="@+id/question"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/basic"
-        android:text="TextView"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/choice1"
-        app:layout_constraintTop_toBottomOf="@+id/questionnum"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintStart_toEndOf="@+id/questionnum"
+        app:layout_constraintTop_toBottomOf="@+id/answerlater" />
 
     <Button
         android:id="@+id/choice4"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonskip"
         android:fontFamily="@font/basic"
@@ -57,12 +56,14 @@
         android:textAllCaps="false"
         android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choice3"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintEnd_toStartOf="@+id/choice1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice3" />
 
     <Button
         android:id="@+id/choice3"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonskip"
         android:fontFamily="@font/basic"
@@ -71,12 +72,14 @@
         android:textAllCaps="false"
         android:textColor="@color/red"
         app:layout_constraintBottom_toTopOf="@+id/choice4"
-        app:layout_constraintTop_toBottomOf="@+id/choice2"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintEnd_toStartOf="@+id/choice2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quesimg" />
 
     <Button
         android:id="@+id/choice2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonskip"
         android:fontFamily="@font/basic"
@@ -84,13 +87,15 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/red"
-        app:layout_constraintBottom_toTopOf="@+id/choice3"
-        app:layout_constraintTop_toBottomOf="@+id/choice1"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintBottom_toTopOf="@+id/choice1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/choice3"
+        app:layout_constraintTop_toBottomOf="@+id/quesimg" />
 
     <Button
         android:id="@+id/choice1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonskip"
         android:fontFamily="@font/basic"
@@ -98,21 +103,23 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/red"
-        app:layout_constraintBottom_toTopOf="@+id/choice2"
-        app:layout_constraintTop_toBottomOf="@+id/question"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/choice4"
+        app:layout_constraintTop_toBottomOf="@+id/choice2" />
 
     <Button
         android:id="@+id/skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/buttonskip"
         android:padding="5dp"
         android:text="skip question"
         android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/answerlater"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -120,6 +127,12 @@
         android:id="@+id/finish"
         android:layout_width="130dp"
         android:layout_height="130dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
         android:background="@drawable/buttonskip"
         android:text="see your test report"
         android:textColor="@color/black"
@@ -132,26 +145,23 @@
         android:id="@+id/answerlater"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/buttonskip"
         android:padding="5dp"
         android:text="answer later"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/skip"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/remaining"
+    <ImageView
+        android:id="@+id/quesimg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:textColor="@color/black"
-        android:text="Remaining:2"
-        app:layout_constraintBottom_toTopOf="@+id/question"
+        app:layout_constraintBottom_toTopOf="@+id/choice3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/questionnum"
-        app:layout_constraintTop_toBottomOf="@+id/time" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        app:srcCompat="@drawable/jmone1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

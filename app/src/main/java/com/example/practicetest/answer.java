@@ -6,21 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class answer extends AppCompatActivity {
 
     questionlibrary questionlibrary=new questionlibrary();
-    TextView questionno,question,answer;
+    TextView questionno,answer;
+    ImageView quesimg;
     Button nextans,ansprev;
     private int qno=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer);
-
-        question=(TextView)findViewById(R.id.ansQuestion);
+        quesimg=(ImageView)findViewById(R.id.imgques);
         questionno=(TextView)findViewById(R.id.ansQuestionNo);
         answer=(TextView)findViewById(R.id.anscorrectans);
         nextans=(Button) findViewById(R.id.ansnext);
@@ -64,7 +65,7 @@ public class answer extends AppCompatActivity {
         if(qno!=questionlibrary.length) {
 
             questionno.setText("question no:" + (qno + 1));
-            question.setText(questionlibrary.getQuestions(qno));
+            quesimg.setImageResource(questionlibrary.getQuestions(qno));
             answer.setText("correct option: "+questionlibrary.getCorrectAnswer(qno));
             qno++;
         }
@@ -82,7 +83,7 @@ public class answer extends AppCompatActivity {
         {
             qno--;
             questionno.setText("question no:" + (qno + 1));
-            question.setText(questionlibrary.getQuestions(qno));
+            quesimg.setImageResource(questionlibrary.getQuestions(qno));
             answer.setText("correct option: "+questionlibrary.getCorrectAnswer(qno));
 
         }

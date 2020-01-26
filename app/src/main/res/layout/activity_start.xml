@@ -41,7 +41,7 @@
         android:background="@drawable/buttonskip"
         android:onClick="jeeadvance"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/jeeadvanced"
+        android:src="@drawable/questionslibrary"
         android:layout_weight="1"
 
         />
