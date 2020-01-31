@@ -3,9 +3,8 @@ package com.example.practicetest;
 public class neetquestionlibrary5 {
 
     //here you can change the questions in order
-    private String mQuestions[]={
-            "neet question 2",
-            "neet ques ","hello world","@#helloooo%"
+    private int mQuestions[]={
+            R.drawable.neettwo1
     };
     //here you can change the options in the order of the questions
     private String mchoice[][]={
@@ -21,8 +20,8 @@ public class neetquestionlibrary5 {
 
     public int length=mQuestions.length;
 
-    public String getQuestions(int a){
-        String question=mQuestions[a];
+    public int getQuestions(int a){
+        int question=mQuestions[a];
         return question;
     }
     public String getChoice1(int a){

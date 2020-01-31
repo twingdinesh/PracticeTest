@@ -8,18 +8,22 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 import java.util.ArrayList;
 
 public class jmain1 extends AppCompatActivity {
     private jeemainquestionlibrary1 questionlibrary=new jeemainquestionlibrary1();
-    private ImageView bookmarkimage,quesimg;
-    private TextView questionno,mquestionview,time,remaining;
+    private ImageView bookmarkimage;
+    PhotoView quesimg;
+    private TextView questionno,time,remaining;
     private Button choice1,choice2,choice3,choice4,skip,finish,answerlater;
     private String manswer;
     private int mquestionnumber=0,checklatecounter=0,num,remainques=1;
@@ -36,20 +40,17 @@ public class jmain1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jmain1);
         questionno=(TextView)findViewById(R.id.questionnum);
-        mquestionview = (TextView) findViewById(R.id.question);
         time=(TextView)findViewById(R.id.time);
         choice1 = (Button) findViewById(R.id.choice1);
         choice2 = (Button) findViewById(R.id.choice2);
         choice3 = (Button) findViewById(R.id.choice3);
         choice4 = (Button) findViewById(R.id.choice4);
-        quesimg=(ImageView)findViewById(R.id.quesimg);
-        bookmarkimage=(ImageView)findViewById(R.id.imageView);
+        quesimg=(PhotoView) findViewById(R.id.quesimg);
         remaining=(TextView)findViewById(R.id.remaining);
         skip=(Button)findViewById(R.id.skip);
         finish=(Button)findViewById(R.id.finish);
         answerlater=(Button)findViewById(R.id.answerlater);
         updateQuestion();
-        bookmarkimage.setColorFilter(getResources().getColor(R.color.black));
         finish.setVisibility(View.INVISIBLE);
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +68,7 @@ public class jmain1 extends AppCompatActivity {
                         choice2.setVisibility(View.VISIBLE);
                         choice3.setVisibility(View.VISIBLE);
                         choice4.setVisibility(View.VISIBLE);
-                        choice1.setTextColor(getResources().getColor(R.color.red));
+                        choice1.setTextColor(getResources().getColor(R.color.white));
                         if (choice1.getText().equals(manswer)) {
                             correctanswer++;
                             mscore = mscore + 4;
@@ -94,7 +95,7 @@ public class jmain1 extends AppCompatActivity {
                 choice2.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        choice2.setTextColor(getResources().getColor(R.color.red));
+                        choice2.setTextColor(getResources().getColor(R.color.white));
                         choice1.setVisibility(View.VISIBLE);
                         choice3.setVisibility(View.VISIBLE);
                         choice4.setVisibility(View.VISIBLE);
@@ -131,7 +132,7 @@ public class jmain1 extends AppCompatActivity {
                         choice2.setVisibility(View.VISIBLE);
                         choice1.setVisibility(View.VISIBLE);
                         choice4.setVisibility(View.VISIBLE);
-                        choice3.setTextColor(getResources().getColor(R.color.red));
+                        choice3.setTextColor(getResources().getColor(R.color.white));
                         if (choice3.getText() == manswer) {
                             correctanswer++;
                             mscore=mscore+4;
@@ -164,7 +165,7 @@ public class jmain1 extends AppCompatActivity {
                         choice2.setVisibility(View.VISIBLE);
                         choice3.setVisibility(View.VISIBLE);
                         choice1.setVisibility(View.VISIBLE);
-                        choice4.setTextColor(getResources().getColor(R.color.red));
+                        choice4.setTextColor(getResources().getColor(R.color.white));
 
                         if (choice4.getText() == manswer) {
                             correctanswer++;
@@ -269,7 +270,6 @@ public class jmain1 extends AppCompatActivity {
 
 
     private void updateQuestion() {
-        bookmarkimage.setColorFilter(getResources().getColor(R.color.black));
         if(mquestionnumber!=questionlibrary.length) {
             remaining.setText("reamaining:"+(questionlibrary.length-remainques));
             questionno.setText("Question no:"+(mquestionnumber+1));
@@ -301,7 +301,7 @@ public class jmain1 extends AppCompatActivity {
                                 choice2.setVisibility(View.VISIBLE);
                                 choice3.setVisibility(View.VISIBLE);
                                 choice4.setVisibility(View.VISIBLE);
-                                choice1.setTextColor(getResources().getColor(R.color.red));
+                                choice1.setTextColor(getResources().getColor(R.color.white));
 
                                 if (choice1.getText().equals(questionlibrary.getCorrectAnswer(num))) {
                                     correctanswer++;
@@ -333,7 +333,7 @@ public class jmain1 extends AppCompatActivity {
                                 choice4.setVisibility(View.VISIBLE);
                                 choice3.setVisibility(View.VISIBLE);
                                 choice1.setVisibility(View.VISIBLE);
-                                choice2.setTextColor(getResources().getColor(R.color.red));
+                                choice2.setTextColor(getResources().getColor(R.color.white));
 
                                 if (choice2.getText().equals(questionlibrary.getCorrectAnswer(num))) {
                                     correctanswer++;
@@ -364,7 +364,7 @@ public class jmain1 extends AppCompatActivity {
                                 choice2.setVisibility(View.VISIBLE);
                                 choice4.setVisibility(View.VISIBLE);
                                 choice1.setVisibility(View.VISIBLE);
-                                choice3.setTextColor(getResources().getColor(R.color.red));
+                                choice3.setTextColor(getResources().getColor(R.color.white));
 
                                 if (choice3.getText().equals(questionlibrary.getCorrectAnswer(num))) {
                                     correctanswer++;
@@ -395,7 +395,7 @@ public class jmain1 extends AppCompatActivity {
                                 choice2.setVisibility(View.VISIBLE);
                                 choice3.setVisibility(View.VISIBLE);
                                 choice1.setVisibility(View.VISIBLE);
-                                choice4.setTextColor(getResources().getColor(R.color.red));
+                                choice4.setTextColor(getResources().getColor(R.color.white));
 
                                 if (choice4.getText().equals(questionlibrary.getCorrectAnswer(num))) {
                                     correctanswer++;
@@ -418,7 +418,6 @@ public class jmain1 extends AppCompatActivity {
             else
             {
                 quesimg.setVisibility(View.INVISIBLE);
-                bookmarkimage.setVisibility(View.INVISIBLE);
                 remaining.setVisibility(View.INVISIBLE);
                 finish.setVisibility(View.VISIBLE);
                 time.setVisibility(View.INVISIBLE);
@@ -488,15 +487,7 @@ public class jmain1 extends AppCompatActivity {
 
 
     }
-    public void bookmark(View view) {
-            Toast.makeText(getApplicationContext(),"Will be availabile in next update",Toast.LENGTH_SHORT).show();
-//        String bmquestion=mquestionview.getText().toString();
-//        String answer=manswer;
-//        buffer.append("\n"+bookquesno+" "+bmquestion+"\n\n Answer :"+answer+"\n\n");
-//        bookquesno++;
-       bookmarkimage.setColorFilter(getResources().getColor(R.color.white));
-//        Toast.makeText(this,"question added to book mark",Toast.LENGTH_SHORT).show();
-    }
+
 
 }
 

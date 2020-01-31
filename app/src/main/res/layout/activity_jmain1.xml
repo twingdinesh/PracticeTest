@@ -4,30 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5dp"
     android:background="@color/white"
+    android:padding="5dp"
     tools:context=".jmain1">
+
     <TextView
         android:id="@+id/remaining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="Remaining:2"
         android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/time" />
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/answerlater" />
 
     <TextView
         android:id="@+id/questionnum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
         android:text="question no: 1"
         android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/time"
         app:layout_constraintEnd_toStartOf="@+id/time"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skip" />
 
     <TextView
         android:id="@+id/time"
@@ -46,79 +49,78 @@
 
     <Button
         android:id="@+id/choice4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonskip"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundbutton"
         android:fontFamily="@font/basic"
         android:text="Button"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/red"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/choice1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choice3" />
-
-    <Button
-        android:id="@+id/choice3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonskip"
-        android:fontFamily="@font/basic"
-        android:text="Button"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/red"
-        app:layout_constraintBottom_toTopOf="@+id/choice4"
-        app:layout_constraintEnd_toStartOf="@+id/choice2"
+        app:layout_constraintEnd_toStartOf="@+id/choice3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quesimg" />
 
     <Button
-        android:id="@+id/choice2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonskip"
+        android:id="@+id/choice3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundbutton"
         android:fontFamily="@font/basic"
         android:text="Button"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/red"
-        app:layout_constraintBottom_toTopOf="@+id/choice1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/choice1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/choice4"
+        app:layout_constraintTop_toBottomOf="@+id/quesimg" />
+
+    <Button
+        android:id="@+id/choice2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/basic"
+        android:text="Button"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/choice1"
+        app:layout_constraintTop_toBottomOf="@+id/quesimg" />
+
+    <Button
+        android:id="@+id/choice1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/basic"
+        android:text="Button"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/choice2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/choice3"
         app:layout_constraintTop_toBottomOf="@+id/quesimg" />
 
     <Button
-        android:id="@+id/choice1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonskip"
-        android:fontFamily="@font/basic"
-        android:text="Button"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/choice4"
-        app:layout_constraintTop_toBottomOf="@+id/choice2" />
-
-    <Button
         android:id="@+id/skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/buttonskip"
-        android:padding="5dp"
-        android:text="skip question"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/answerlater"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/roundbutton"
+        android:text="skip"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -142,38 +144,39 @@
 
     <Button
         android:id="@+id/answerlater"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/buttonskip"
-        android:padding="5dp"
-        android:text="answer later"
-        android:textColor="@color/black"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/roundbutton"
+        android:text="later"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/skip"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <com.github.chrisbanes.photoview.PhotoView
 
         android:id="@+id/quesimg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/jmone1" />
+        app:layout_constraintTop_toBottomOf="@+id/questionnum"
+        app:srcCompat="@drawable/jmone27" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:onClick="bookmark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answerlater"
-        app:srcCompat="@drawable/ic_bookmark_black_24dp"
-        tools:ignore="VectorDrawableCompat" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        android:layout_marginRight="5dp"-->
+<!--        android:onClick="bookmark"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/answerlater"-->
+<!--        app:srcCompat="@drawable/ic_bookmark_black_24dp"-->
+<!--        tools:ignore="VectorDrawableCompat" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

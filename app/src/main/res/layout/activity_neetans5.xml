@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/progressbg"
+    android:background="@color/white"
     android:orientation="vertical"
     android:padding="5dp"
     tools:context=".neetans5">
+
 
     <TextView
         android:id="@+id/ansQuestionNo"
@@ -24,31 +25,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/ansQuestion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/basic"
-        android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="13dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ansQuestionNo" />
-
-    <TextView
         android:id="@+id/anscorrectans"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
+        android:layout_marginBottom="267dp"
         android:fontFamily="@font/basic"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ansQuestion" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/ansnext"
@@ -77,8 +66,19 @@
         android:textColor="@color/rose"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgques"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/anscorrectans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ansQuestionNo"
+        app:srcCompat="@drawable/jmone1" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,7 +25,7 @@ public class splashScreen<userpin> extends AppCompatActivity {
     Animation animation,alpha,round;
     Button button;
     TextView txt1,txt2,txt3,txt4;
-    int pin=1221,userpin;
+    long pin=2442476,userpin;
     SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class splashScreen<userpin> extends AppCompatActivity {
         txt3.setAnimation(alpha);
         txt4.setAnimation(alpha);
         button.setAnimation(round);
-        userpin=sharedPreferences.getInt("pin",0);
+        userpin=sharedPreferences.getLong("pin",0);
     }
         public void open(View view) {
             if (pin != userpin) {
@@ -64,7 +64,7 @@ public class splashScreen<userpin> extends AppCompatActivity {
 
                         if (Integer.parseInt(input.getText().toString()) == pin) {
                             SharedPreferences.Editor edit = sharedPreferences.edit();
-                            edit.putInt("pin", userpin);
+                            edit.putLong("pin", userpin);
                             edit.commit();
                             startActivity(new Intent(getApplicationContext(), startActivity.class));
                             splashScreen.this.finish();

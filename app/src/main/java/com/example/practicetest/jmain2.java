@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.github.chrisbanes.photoview.PhotoView;
 
 import java.util.ArrayList;
 
@@ -19,7 +22,8 @@ public class jmain2 extends AppCompatActivity {
     private TextView questionno,mquestionview,time,remaining;
     private Button choice1,choice2,choice3,choice4,skip,finish,answerlater;
     private String manswer;
-    private ImageView quesimg;
+    private ImageView bookmarkimage;
+    PhotoView quesimg;
     private int mquestionnumber=0,checklatecounter=0,num,remainques=1;
     public  int[] ans=new int[questionlibrary.length];
     public ArrayList<Integer> checklate=new ArrayList<Integer>();
@@ -30,8 +34,9 @@ public class jmain2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jmain2);
         questionno=(TextView)findViewById(R.id.questionnum);
-        quesimg=(ImageView)findViewById(R.id.quesimg);
+        quesimg=(PhotoView) findViewById(R.id.quesimg);
         time=(TextView)findViewById(R.id.time);
+//        bookmarkimage=(ImageView)findViewById(R.id.imageView);
         choice1 = (Button) findViewById(R.id.choice1);
         choice2 = (Button) findViewById(R.id.choice2);
         choice3 = (Button) findViewById(R.id.choice3);
@@ -471,5 +476,14 @@ public class jmain2 extends AppCompatActivity {
 
     }
 
+    public void bookmark(View view) {
+        Toast.makeText(getApplicationContext(),"Will be availabile in next update",Toast.LENGTH_SHORT).show();
+//        String bmquestion=mquestionview.getText().toString();
+//        String answer=manswer;
+//        buffer.append("\n"+bookquesno+" "+bmquestion+"\n\n Answer :"+answer+"\n\n");
+//        bookquesno++;
+//        bookmarkimage.setColorFilter(getResources().getColor(R.color.white));
+//        Toast.makeText(this,"question added to book mark",Toast.LENGTH_SHORT).show();
+    }
 }
 

@@ -11,13 +11,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 import java.util.ArrayList;
 
 public class jmain4 extends AppCompatActivity {
     private jeemainquestionlibrary4 questionlibrary=new jeemainquestionlibrary4();
-    private TextView questionno,mquestionview,time,remaining;
+    private TextView questionno,time,remaining;
     private Button choice1,choice2,choice3,choice4,skip,finish,answerlater;
     private String manswer;
+    PhotoView quesimg;
     private int mquestionnumber=0,checklatecounter=0,num,remainques=1;
     public  int[] ans=new int[questionlibrary.length];
     public ArrayList<Integer> checklate=new ArrayList<Integer>();
@@ -28,7 +31,7 @@ public class jmain4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jmain4);
         questionno=(TextView)findViewById(R.id.questionnum);
-        mquestionview = (TextView) findViewById(R.id.question);
+        quesimg=(PhotoView)findViewById(R.id.quesimg);
         time=(TextView)findViewById(R.id.time);
         choice1 = (Button) findViewById(R.id.choice1);
         choice2 = (Button) findViewById(R.id.choice2);
@@ -56,7 +59,7 @@ public class jmain4 extends AppCompatActivity {
                         choice2.setVisibility(View.VISIBLE);
                         choice3.setVisibility(View.VISIBLE);
                         choice4.setVisibility(View.VISIBLE);
-                        choice1.setTextColor(getResources().getColor(R.color.red));
+                        choice1.setTextColor(getResources().getColor(R.color.white));
                         if (choice1.getText().equals(manswer)) {
                             correctanswer++;
                             mscore = mscore + 4;
@@ -83,7 +86,7 @@ public class jmain4 extends AppCompatActivity {
                 choice2.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        choice2.setTextColor(getResources().getColor(R.color.red));
+                        choice2.setTextColor(getResources().getColor(R.color.white));
                         choice1.setVisibility(View.VISIBLE);
                         choice3.setVisibility(View.VISIBLE);
                         choice4.setVisibility(View.VISIBLE);
@@ -120,7 +123,7 @@ public class jmain4 extends AppCompatActivity {
                         choice2.setVisibility(View.VISIBLE);
                         choice1.setVisibility(View.VISIBLE);
                         choice4.setVisibility(View.VISIBLE);
-                        choice3.setTextColor(getResources().getColor(R.color.red));
+                        choice3.setTextColor(getResources().getColor(R.color.white));
                         if (choice3.getText() == manswer) {
                             correctanswer++;
                             mscore=mscore+4;
@@ -153,7 +156,7 @@ public class jmain4 extends AppCompatActivity {
                         choice2.setVisibility(View.VISIBLE);
                         choice3.setVisibility(View.VISIBLE);
                         choice1.setVisibility(View.VISIBLE);
-                        choice4.setTextColor(getResources().getColor(R.color.red));
+                        choice4.setTextColor(getResources().getColor(R.color.white));
 
                         if (choice4.getText() == manswer) {
                             correctanswer++;
@@ -256,7 +259,7 @@ public class jmain4 extends AppCompatActivity {
         if(mquestionnumber!=questionlibrary.length) {
             remaining.setText("reamaining:"+(questionlibrary.length-remainques));
             questionno.setText("Question no:"+(mquestionnumber+1));
-            mquestionview.setText(questionlibrary.getQuestions(mquestionnumber));
+            quesimg.setImageResource(questionlibrary.getQuestions(mquestionnumber));
             choice1.setText(questionlibrary.getChoice1(mquestionnumber));
             choice2.setText(questionlibrary.getChoice2(mquestionnumber));
             choice3.setText(questionlibrary.getChoice3(mquestionnumber));
@@ -284,7 +287,7 @@ public class jmain4 extends AppCompatActivity {
                                 choice2.setVisibility(View.VISIBLE);
                                 choice3.setVisibility(View.VISIBLE);
                                 choice4.setVisibility(View.VISIBLE);
-                                choice1.setTextColor(getResources().getColor(R.color.red));
+                                choice1.setTextColor(getResources().getColor(R.color.white));
 
                                 if (choice1.getText().equals(questionlibrary.getCorrectAnswer(num))) {
                                     correctanswer++;
@@ -316,7 +319,7 @@ public class jmain4 extends AppCompatActivity {
                                 choice4.setVisibility(View.VISIBLE);
                                 choice3.setVisibility(View.VISIBLE);
                                 choice1.setVisibility(View.VISIBLE);
-                                choice2.setTextColor(getResources().getColor(R.color.red));
+                                choice2.setTextColor(getResources().getColor(R.color.white));
 
                                 if (choice2.getText().equals(questionlibrary.getCorrectAnswer(num))) {
                                     correctanswer++;
@@ -347,7 +350,7 @@ public class jmain4 extends AppCompatActivity {
                                 choice2.setVisibility(View.VISIBLE);
                                 choice4.setVisibility(View.VISIBLE);
                                 choice1.setVisibility(View.VISIBLE);
-                                choice3.setTextColor(getResources().getColor(R.color.red));
+                                choice3.setTextColor(getResources().getColor(R.color.white));
 
                                 if (choice3.getText().equals(questionlibrary.getCorrectAnswer(num))) {
                                     correctanswer++;
@@ -378,7 +381,7 @@ public class jmain4 extends AppCompatActivity {
                                 choice2.setVisibility(View.VISIBLE);
                                 choice3.setVisibility(View.VISIBLE);
                                 choice1.setVisibility(View.VISIBLE);
-                                choice4.setTextColor(getResources().getColor(R.color.red));
+                                choice4.setTextColor(getResources().getColor(R.color.white));
 
                                 if (choice4.getText().equals(questionlibrary.getCorrectAnswer(num))) {
                                     correctanswer++;
@@ -405,7 +408,7 @@ public class jmain4 extends AppCompatActivity {
                 skip.setVisibility(View.INVISIBLE);
                 answerlater.setVisibility(View.INVISIBLE);
                 questionno.setVisibility(View.INVISIBLE);
-                mquestionview.setVisibility(View.INVISIBLE);
+                quesimg.setVisibility(View.INVISIBLE);
                 choice1.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
@@ -439,12 +442,11 @@ public class jmain4 extends AppCompatActivity {
     public void checklate()
     {
         if(checklatecounter!=checklate.size()) {
-            System.out.println(checklatecounter);
             Integer integer = new Integer(checklate.get(checklatecounter));
             num = integer.intValue();
             remaining.setText("reamaining:"+(questionlibrary.length-remainques));
             questionno.setText("Question no:" + (num + 1));
-            mquestionview.setText(questionlibrary.getQuestions(num));
+            quesimg.setImageResource(questionlibrary.getQuestions(num));
             choice1.setText(questionlibrary.getChoice1(num));
             choice2.setText(questionlibrary.getChoice2(num));
             choice3.setText(questionlibrary.getChoice3(num));
@@ -461,7 +463,7 @@ public class jmain4 extends AppCompatActivity {
             time.setVisibility(View.INVISIBLE);
             answerlater.setVisibility(View.INVISIBLE);
             questionno.setVisibility(View.INVISIBLE);
-            mquestionview.setVisibility(View.INVISIBLE);
+            quesimg.setVisibility(View.INVISIBLE);
             choice1.setVisibility(View.INVISIBLE);
             choice2.setVisibility(View.INVISIBLE);
             choice3.setVisibility(View.INVISIBLE);
