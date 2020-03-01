@@ -26,6 +26,8 @@ public class jeemainquestionlibrary1 {
             "3","1","3","4","3","2","4","3","3","4",
             "4","4","3","3","4","4","3","2","1","3","53","64","38","4.5","1"};
 
+    public int answerimages[]={};
+
 
     public int length=imageues.length;
 

@@ -14,7 +14,7 @@ public class neetans2 extends AppCompatActivity {
     neetquestionlibrary2 questionlibrary=new neetquestionlibrary2();
     TextView questionno,answer;
     Button nextans,ansprev;
-    ImageView quesimg;
+    ImageView quesimg,ansimg;
     private int qno=0;
 
     @Override
@@ -27,6 +27,7 @@ public class neetans2 extends AppCompatActivity {
         nextans=(Button) findViewById(R.id.ansnext);
         ansprev=(Button)findViewById(R.id.ansprev);
         ansprev.setVisibility(View.INVISIBLE);
+        ansimg=(ImageView)findViewById(R.id.ansimg);
         updatesheet();
         nextans.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +66,7 @@ public class neetans2 extends AppCompatActivity {
         if(qno!=questionlibrary.length) {
 
             questionno.setText("question no:" + (qno + 1));
+            ansimg.setImageResource(questionlibrary.answerimages[qno]);
             quesimg.setImageResource(questionlibrary.getQuestions(qno));
             answer.setText("correct option: "+questionlibrary.getCorrectAnswer(qno));
             qno++;
@@ -83,6 +85,7 @@ public class neetans2 extends AppCompatActivity {
         {
             qno--;
             questionno.setText("question no:" + (qno + 1));
+            ansimg.setImageResource(questionlibrary.answerimages[qno]);
             quesimg.setImageResource(questionlibrary.getQuestions(qno));
             answer.setText("correct option: "+questionlibrary.getCorrectAnswer(qno));
 

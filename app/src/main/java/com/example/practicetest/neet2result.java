@@ -9,13 +9,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import javax.crypto.spec.IvParameterSpec;
+
 public class neet2result extends AppCompatActivity {
 
     neetquestionlibrary2 questionlibrary=new neetquestionlibrary2();
     neetest2 mainActivity=new neetest2();
     private   TextView result,resQuesNo,correctans,yourans;
-    private   Button next,prev;
-    ImageView quesimg;
+    private   Button next,prev,explain;
+    ImageView quesimg,ansimg;
     private   int quesno=0;
     private int[] youransw=new int[questionlibrary.length-1];
     @Override
@@ -23,12 +25,15 @@ public class neet2result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_neet2result);
         result=(TextView)findViewById(R.id.result);
+        explain=(Button)findViewById(R.id.explain);
+        ansimg=(ImageView)findViewById(R.id.imageans);
         resQuesNo=(TextView)findViewById(R.id.resultQuestionNo);
         quesimg=(ImageView)findViewById(R.id.imgques);
         correctans=(TextView)findViewById(R.id.correctans);
         yourans=(TextView)findViewById(R.id.yourans);
         next=(Button)findViewById(R.id.next);
         prev=(Button)findViewById(R.id.prev);
+        ansimg.setVisibility(View.INVISIBLE);
         prev.setVisibility(View.INVISIBLE);
         Bundle bundle=getIntent().getExtras();
         result.setText("your score is:"+mainActivity.mscore);
@@ -51,13 +56,22 @@ public class neet2result extends AppCompatActivity {
 
             }
         });
-
+        explain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ansimg.setVisibility(View.VISIBLE);
+                explain.setVisibility(View.INVISIBLE);
+            }
+        });
 
     }
     public void updateQuestion()
     {
         if(quesno!=questionlibrary.length) {
             resQuesNo.setText("question no:" +(quesno + 1));
+            ansimg.setVisibility(View.INVISIBLE);
+            explain.setVisibility(View.VISIBLE);
+            ansimg.setImageResource(questionlibrary.answerimages[quesno]);
             quesimg.setImageResource(questionlibrary.getQuestions(quesno));
             correctans.setText("correct ans:"+questionlibrary.getCorrectAnswer(quesno));
             if(youransw[quesno]==1)
@@ -85,6 +99,9 @@ public class neet2result extends AppCompatActivity {
         quesno--;
         if(quesno>=0) {
             resQuesNo.setText("question no:" +(quesno + 1));
+            ansimg.setVisibility(View.INVISIBLE);
+            explain.setVisibility(View.VISIBLE);
+            ansimg.setImageResource(questionlibrary.answerimages[quesno]);
             quesimg.setImageResource(questionlibrary.getQuestions(quesno));
             correctans.setText("correct ans:"+questionlibrary.getCorrectAnswer(quesno));
             if(youransw[quesno]==1)

@@ -62,7 +62,7 @@ public class splashScreen<userpin> extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         userpin = Integer.parseInt(input.getText().toString());
 
-                        if (Integer.parseInt(input.getText().toString()) == pin) {
+                        if (Long.parseLong(input.getText().toString()) == pin) {
                             SharedPreferences.Editor edit = sharedPreferences.edit();
                             edit.putLong("pin", userpin);
                             edit.commit();

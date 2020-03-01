@@ -30,6 +30,15 @@ public class jeemainquestionlibrary2 {
             "2","4","3","4","2","3","1","4","1","4","2","4","2","4","1","3","4","2","4","4",
     "1610","48","2","7.68","4"};
 
+    public int answerimages[]={R.drawable.ajone1,R.drawable.noans,R.drawable.ajone3,R.drawable.ajone4,R.drawable.ajone5,R.drawable.noans,R.drawable.noans,R.drawable.ajone8,R.drawable.noans,R.drawable.ajone10,
+            R.drawable.ajone11,R.drawable.ajone12,R.drawable.noans,R.drawable.ajone14,R.drawable.ajone15,R.drawable.ajone16,R.drawable.ajone17,R.drawable.ajone18,R.drawable.ajone19,R.drawable.ajone20,
+            R.drawable.ajone21,R.drawable.ajone22,R.drawable.ajone23,R.drawable.ajone24,R.drawable.ajone25,R.drawable.ajone26,R.drawable.ajone27,R.drawable.ajone28,R.drawable.ajone29,R.drawable.ajone30,
+            R.drawable.ajone31,R.drawable.ajone32,R.drawable.ajone33,R.drawable.ajone34,R.drawable.ajone35,R.drawable.ajone36,R.drawable.ajone37,R.drawable.ajone38,R.drawable.ajone39,R.drawable.ajone40,
+            R.drawable.noans,R.drawable.ajone42,R.drawable.ajone43,R.drawable.ajone44,R.drawable.ajone45,R.drawable.ajone46,R.drawable.ajone47,R.drawable.ajone48,R.drawable.ajone49,R.drawable.ajone50,
+            R.drawable.ajone51,R.drawable.ajone52,R.drawable.ajone53,R.drawable.ajone54,R.drawable.ajone55,R.drawable.ajone56,R.drawable.ajone57,R.drawable.ajone58,R.drawable.ajone59,R.drawable.ajone60,
+            R.drawable.ajone61,R.drawable.ajone62,R.drawable.ajone63,R.drawable.ajone64,R.drawable.ajone65,R.drawable.ajone66,R.drawable.ajone67,R.drawable.ajone68,R.drawable.ajone69,R.drawable.ajone70,
+            R.drawable.ajone71,R.drawable.ajone72,R.drawable.ajone73,R.drawable.ajone74,R.drawable.ajone75,};
+
     public int length=images.length;
 
     public int getQuestions(int a){

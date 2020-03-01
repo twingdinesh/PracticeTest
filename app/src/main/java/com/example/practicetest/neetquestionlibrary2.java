@@ -43,17 +43,28 @@ public class neetquestionlibrary2 {
 
     //here you should change the correct option according to that order
     private String mCorrectAnswer[]={
-            "4","3","2","2","3","2","4","4","2","1","3","4","3","1","3","2","3","1","3","1","1","1","2","1","2",
-            "2","1","2","4","2","1","2","2","1","2","2","4","3","4","2","2","1","1","3","3",
-            "2","2","3","4","2","2","3","4","4","2","3","3","4","1","3","1","1","3","1","4","1","4","4","4","4",
-            "2","4","2","1","2","2","1","3","1","4","2","4","3","1","3","2","2","3","3","1",
-            "1","3","1","3","4","2","3","3","3","2","2","3","4","3","1","3","2","3","3","3","1","4","4","1","2","1",
-            "2","1","2","3","1","1","1","4","2","4","4","2","1","2","3","2","3","4","1","4","2","4","3","3","3","2","3",
-            "4","1","3","3","4","3","1","1","1","2","2","3","4","3","3","3","3","1","1","3","2","1","1","3","1","3","4",
-            "1","7","1","2","4","3","3","2","3","3","1","4","1",
+            "4","3","2","2","3","2","4","4","2","1","3","4","3","1","3","2","3","1","3","1",
+            "1","1","2","1","2","2","1","2","4","2","1","2","2","1","2","2","4","3","4","2",
+            "2","1","1","3","3",
+            "2","2","3","4","2","2","3","4","4","2","3","3","4","1","3","1","1","3","1","4",
+            "1","4","4","4","4","2","4","2","1","2","2","1","3","1","4","2","4","3","1","3","2",
+            "2","3","3","1",
+            "1","3","1","3","4","2","3","3","3","2","2","3","4","3","1","3","2","3","3","3",
+            "1","4","4","1","2","1","2","1","2","3","1","1","1","4","2","4","4","2","1","2","3",
+            "2","3","4","1","4","2","4","3","3","3","2","3","4","1","3","3","4","3","1","1","1",
+            "2","2","3","4","3","3","3","3","1","1","3","2","1","1","3","1","3","4","2","4","3",
+            "3","2","3","3","1","4","1",
 
     };
-
+    public int answerimages[]={R.drawable.a1,R.drawable.a2,R.drawable.a3,R.drawable.a4,R.drawable.a5,R.drawable.a6,R.drawable.a7,R.drawable.noans,R.drawable.noans,R.drawable.a10,
+            R.drawable.a11,R.drawable.a12,R.drawable.a13,R.drawable.a14,R.drawable.a15,R.drawable.noans,R.drawable.a17,R.drawable.a18,R.drawable.noans,R.drawable.a20,
+            R.drawable.a21,R.drawable.a22,R.drawable.a23,R.drawable.a24,R.drawable.a25,R.drawable.a26,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.a31,R.drawable.a32,R.drawable.noans,R.drawable.a34,R.drawable.a35,R.drawable.a36,R.drawable.a37,R.drawable.a38,R.drawable.a39,R.drawable.a40,
+            R.drawable.a41,R.drawable.a42,R.drawable.noans,R.drawable.a44,R.drawable.a45,R.drawable.noans,R.drawable.a47,R.drawable.a48,R.drawable.noans,R.drawable.a50,
+            R.drawable.noans,R.drawable.a52,R.drawable.a53,R.drawable.a54,R.drawable.a55,R.drawable.noans,R.drawable.a57,R.drawable.a58,R.drawable.a59,R.drawable.a60,
+            R.drawable.a61,R.drawable.a62,R.drawable.a63,R.drawable.a64,R.drawable.a65,R.drawable.a66,R.drawable.a67,R.drawable.noans,R.drawable.a69,R.drawable.a70,
+            R.drawable.a71,R.drawable.a72,R.drawable.noans,R.drawable.a74,R.drawable.noans,R.drawable.a76,R.drawable.a77,R.drawable.a78,R.drawable.a79,R.drawable.noans,
+            R.drawable.a81,R.drawable.a82,R.drawable.noans,R.drawable.a84,R.drawable.noans,R.drawable.a86,R.drawable.a87,R.drawable.a88,R.drawable.a89,R.drawable.noans,};
 
     public int length=mQuestions.length;
 

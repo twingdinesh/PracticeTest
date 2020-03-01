@@ -12,9 +12,9 @@ import android.widget.Toast;
 public class jmain1result extends AppCompatActivity {
     jeemainquestionlibrary1 questionlibrary=new jeemainquestionlibrary1();
     jmain1 mainActivity=new jmain1();
-    private ImageView quesimg;
+    private   Button next,prev,explain;
+    ImageView quesimg,ansimg;
     private   TextView result,resQuesNo,resQues,correctans,yourans;
-    private   Button next,prev;
     private   int quesno=0;
     private int[] youransw=new int[questionlibrary.length-1];
     @Override
@@ -29,6 +29,9 @@ public class jmain1result extends AppCompatActivity {
         next=(Button)findViewById(R.id.next);
         prev=(Button)findViewById(R.id.prev);
         quesimg=(ImageView)findViewById(R.id.imgques);
+        ansimg=(ImageView)findViewById(R.id.imageans);
+        explain=(Button)findViewById(R.id.explain);
+        ansimg.setVisibility(View.INVISIBLE);
         prev.setVisibility(View.INVISIBLE);
         Bundle bundle=getIntent().getExtras();
         result.setText("your score is:"+mainActivity.mscore);
@@ -51,16 +54,23 @@ public class jmain1result extends AppCompatActivity {
 
             }
         });
+        explain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ansimg.setVisibility(View.VISIBLE);
+                explain.setVisibility(View.INVISIBLE);
+            }
+        });
+
 
 
     }
     public void updateQuestion()
     {
         if(quesno!=questionlibrary.length) {
-
-
-
+            ansimg.setVisibility(View.INVISIBLE);
             resQuesNo.setText("question no:" +(quesno + 1));
+            ansimg.setImageResource(questionlibrary.answerimages[quesno]);
             quesimg.setImageResource(questionlibrary.getQuestions(quesno));
             correctans.setText("correct ans:"+questionlibrary.getCorrectAnswer(quesno));
             if(youransw[quesno]==1)
@@ -88,9 +98,9 @@ public class jmain1result extends AppCompatActivity {
     {
         quesno--;
         if(quesno>=0) {
-
-
+            ansimg.setVisibility(View.INVISIBLE);
             resQuesNo.setText("question no:" +(quesno + 1));
+            ansimg.setImageResource(questionlibrary.answerimages[quesno]);
             quesimg.setImageResource(questionlibrary.getQuestions(quesno));
             correctans.setText("correct ans:"+questionlibrary.getCorrectAnswer(quesno));
             if(youransw[quesno]==1)
