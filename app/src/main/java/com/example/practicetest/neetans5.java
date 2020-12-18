@@ -1,7 +1,5 @@
 package com.example.practicetest;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,22 +8,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class neetans5 extends AppCompatActivity {
     neetquestionlibrary5 questionlibrary=new neetquestionlibrary5();
     TextView questionno,answer;
     Button nextans,ansprev;
-    ImageView quesimg;
+    ImageView quesimg,ansimg;
     private int qno=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_neetans5);
+        setContentView(R.layout.activity_neetans2);
         quesimg=(ImageView)findViewById(R.id.imgques);
         questionno=(TextView)findViewById(R.id.ansQuestionNo);
         answer=(TextView)findViewById(R.id.anscorrectans);
         nextans=(Button) findViewById(R.id.ansnext);
         ansprev=(Button)findViewById(R.id.ansprev);
         ansprev.setVisibility(View.INVISIBLE);
+        ansimg=(ImageView)findViewById(R.id.ansimg);
         updatesheet();
         nextans.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +66,7 @@ public class neetans5 extends AppCompatActivity {
         if(qno!=questionlibrary.length) {
 
             questionno.setText("question no:" + (qno + 1));
+            ansimg.setImageResource(questionlibrary.answerimages[qno]);
             quesimg.setImageResource(questionlibrary.getQuestions(qno));
             answer.setText("correct option: "+questionlibrary.getCorrectAnswer(qno));
             qno++;
@@ -82,6 +85,7 @@ public class neetans5 extends AppCompatActivity {
         {
             qno--;
             questionno.setText("question no:" + (qno + 1));
+            ansimg.setImageResource(questionlibrary.answerimages[qno]);
             quesimg.setImageResource(questionlibrary.getQuestions(qno));
             answer.setText("correct option: "+questionlibrary.getCorrectAnswer(qno));
 

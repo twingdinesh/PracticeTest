@@ -4,45 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:padding="5dp"
+    android:gravity="center"
+    android:background="@drawable/bluewall"
     android:orientation="vertical"
-    android:background="@color/lightgreybg"
-    android:weightSum="3"
+    android:padding="5dp"
     tools:context=".startActivity">
 
 
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_margin="2sp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:onClick="neet"-->
+<!--        android:src="@drawable/neet" />-->
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200sp"
-            android:layout_alignParentLeft="true"
-            android:onClick="neet"
-            android:layout_margin="2sp"
-            android:background="@drawable/buttonskip"
-            android:src="@drawable/neet"
-            android:layout_weight="1"
-            />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200sp"
-            android:src="@drawable/jeemain"
-            android:layout_margin="2sp"
-            android:onClick="jeemain"
-            android:background="@drawable/buttonskip"
-            android:layout_alignParentRight="true"
-            android:layout_weight="1"
-            />
-
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_margin="2sp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:onClick="jeemain"-->
+<!--        android:src="@drawable/jeemain"-->
+<!--        android:layout_alignParentBottom="true"/>-->
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:layout_margin="2sp"
-        android:background="@drawable/buttonskip"
-        android:onClick="jeeadvance"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/questionslibrary"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:adjustViewBounds="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JEE SERIES"
+        android:background="@drawable/greywhitebg"
+        android:onClick="jeemain"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEET SERIES"
+        android:background="@drawable/greywhitebg"
+        android:onClick="neet"
+        android:layout_marginTop="5dp"/>
 
-        />
 </LinearLayout>

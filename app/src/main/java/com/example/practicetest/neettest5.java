@@ -1,8 +1,5 @@
 package com.example.practicetest;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.chrisbanes.photoview.PhotoView;
 
@@ -21,7 +22,6 @@ public class neettest5 extends AppCompatActivity {
     private TextView questionno,time,remaining;
     private Button choice1,choice2,choice3,choice4,skip,finish,answerlater;
     private String manswer;
-    private ImageView bookmarkimage;
     PhotoView quesimg;
     private int mquestionnumber=0,checklatecounter=0,num,remainques=1;
     public  int[] ans=new int[questionlibrary.length];
@@ -31,18 +31,17 @@ public class neettest5 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_neettest5);
-        quesimg=(PhotoView) findViewById(R.id.quesimg);
-        bookmarkimage=(ImageView)findViewById(R.id.imageView);
+        setContentView(R.layout.activity_neetest2);
         questionno=(TextView)findViewById(R.id.questionnum);
         time=(TextView)findViewById(R.id.time);
+        quesimg=(PhotoView) findViewById(R.id.quesimg);
         choice1 = (Button) findViewById(R.id.choice1);
         choice2 = (Button) findViewById(R.id.choice2);
         choice3 = (Button) findViewById(R.id.choice3);
         choice4 = (Button) findViewById(R.id.choice4);
         skip=(Button)findViewById(R.id.skip);
-        remaining=(TextView)findViewById(R.id.remaining);
         finish=(Button)findViewById(R.id.finish);
+        remaining=(TextView)findViewById(R.id.remaining);
         answerlater=(Button)findViewById(R.id.answerlater);
         updateQuestion();
         finish.setVisibility(View.INVISIBLE);
@@ -431,7 +430,6 @@ public class neettest5 extends AppCompatActivity {
         builder.setTitle("quit test?").setMessage("are you sure you want to quit the test?").setPositiveButton("yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-//                Intent in=new Intent(MainActivity.this,answer.class);
                 neettest5.this.finish();
                 startActivity(new Intent(neettest5.this,neetans5.class));
             }

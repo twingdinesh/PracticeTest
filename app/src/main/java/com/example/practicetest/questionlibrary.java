@@ -10,7 +10,7 @@ public class questionlibrary {
             R.drawable.neetone61,R.drawable.neetone62,R.drawable.neetone63,R.drawable.neetone64,R.drawable.neetone65,R.drawable.neetone66,R.drawable.neetone67,R.drawable.neetone68,R.drawable.neetone69,R.drawable.neetone70,R.drawable.neetone71,R.drawable.neetone72,R.drawable.neetone73,R.drawable.neetone74,R.drawable.neetone75,
             R.drawable.neetone76,R.drawable.neetone77,R.drawable.neetone78,R.drawable.neetone79,R.drawable.neetone80,R.drawable.neetone81,R.drawable.neetone82,R.drawable.neetone83,R.drawable.neetone84,R.drawable.neetone85,R.drawable.neetone86,R.drawable.neetone87,R.drawable.neetone88,R.drawable.neetone89,R.drawable.neetone90,
             R.drawable.neetone91,R.drawable.neetone92,R.drawable.neetone93,R.drawable.neetone94,R.drawable.neetone95,R.drawable.neetone96,R.drawable.neetone97,R.drawable.neetone98,R.drawable.neetone99,R.drawable.neetone100,R.drawable.neetone101,R.drawable.neetone102,R.drawable.neetone103,R.drawable.neetone104,R.drawable.neetone105,
-            R.drawable.neetone106,R.drawable.neetone107,R.drawable.neetone108,R.drawable.neetone109,R.drawable.neetone110,R.drawable.neetone111,R.drawable.neetone112,R.drawable.neetone113,R.drawable.neetone114,R.drawable.neetone115,R.drawable.neetone116,R.drawable.neetone117,R.drawable.neetone118,R.drawable.neetone119,R.drawable.neetone120,
+           R.drawable.neetone106,R.drawable.neetone107,R.drawable.neetone108,R.drawable.neetone109,R.drawable.neetone110,R.drawable.neetone111,R.drawable.neetone112,R.drawable.neetone113,R.drawable.neetone114,R.drawable.neetone115,R.drawable.neetone116,R.drawable.neetone117,R.drawable.neetone118,R.drawable.neetone119,R.drawable.neetone120,
             R.drawable.neetone121,R.drawable.neetone122,R.drawable.neetone123,R.drawable.neetone124,R.drawable.neetone125,R.drawable.neetone126,R.drawable.neetone127,R.drawable.neetone128,R.drawable.neetone129,R.drawable.neetone130,R.drawable.neetone131,R.drawable.neetone132,R.drawable.neetone133,R.drawable.neetone134,R.drawable.neetone135,
             R.drawable.neetone136,R.drawable.neetone137,R.drawable.neetone138,R.drawable.neetone139,R.drawable.neetone140,R.drawable.neetone141,R.drawable.neetone142,R.drawable.neetone143,R.drawable.neetone144,R.drawable.neetone145,R.drawable.neetone146,R.drawable.neetone147,R.drawable.neetone148,R.drawable.neetone149,R.drawable.neetone150,
             R.drawable.neetone151,R.drawable.neetone152,R.drawable.neetone153,R.drawable.neetone154,R.drawable.neetone155,R.drawable.neetone156,R.drawable.neetone157,R.drawable.neetone158,R.drawable.neetone159,R.drawable.neetone160,R.drawable.neetone161,R.drawable.neetone162,R.drawable.neetone163,R.drawable.neetone164,R.drawable.neetone165,
@@ -50,6 +50,24 @@ public class questionlibrary {
             "4","3","3","1","3","3","3","1","4","1","3","3","2","2","1","4","2","2","3","4","3","4","3","2","4","1","4",
             "4","3","3","1","2","2","2","1","3","2","1","4","2","1","2","3","4","1","2","2","1","2","2","1","2","3","3",
             "4","2","3","3","2","3","1","2","1","1",
+    };
+    public int answerimages[]={
+      R.drawable.neet2a1,R.drawable.neet2a2,R.drawable.neet2a3,R.drawable.neet2a4,R.drawable.noans,R.drawable.neet2a6,R.drawable.neet2a7,R.drawable.neet2a8,R.drawable.neet2a9,R.drawable.neet2a10,R.drawable.neet2a11,R.drawable.noans,R.drawable.neet2a13,R.drawable.neet2a14,R.drawable.neet2a15,
+            R.drawable.neet2a16,R.drawable.neet2a17,R.drawable.neet2a18,R.drawable.neet2a19,R.drawable.neet2a20,R.drawable.neet2a21,R.drawable.neet2a22,R.drawable.neet2a23,R.drawable.neet2a24,R.drawable.neet2a25,R.drawable.neet2a26,R.drawable.neet2a27,R.drawable.neet2a28,R.drawable.neet2a29,R.drawable.neet2a30,
+            R.drawable.neet2a31,R.drawable.noans,R.drawable.neet2a33,R.drawable.neet2a34,R.drawable.neet2a35,R.drawable.neet2a36,R.drawable.neet2a37,R.drawable.neet2a38,R.drawable.noans,R.drawable.neet2a40,R.drawable.neet2a41,R.drawable.neet2a42,R.drawable.neet2a43,R.drawable.neet2a44,R.drawable.neet2a45,
+            R.drawable.neet2a46,R.drawable.neet2a47,R.drawable.neet2a48,R.drawable.neet2a49,R.drawable.neet2a50,R.drawable.neet2a51,R.drawable.neet2a52,R.drawable.neet2a53,R.drawable.noans,R.drawable.neet2a55,R.drawable.neet2a56,R.drawable.neet2a57,R.drawable.neet2a58,R.drawable.neet2a59,R.drawable.neet2a60,
+            R.drawable.neet2a61,R.drawable.noans,R.drawable.noans,R.drawable.neet2a64,R.drawable.noans,R.drawable.neet2a66,R.drawable.neet2a67,R.drawable.neet2a68,R.drawable.noans,R.drawable.neet2a70,
+            R.drawable.noans,R.drawable.neet2a72,R.drawable.neet2a73,R.drawable.neet2a74,R.drawable.neet2a75,R.drawable.neet2a76,R.drawable.neet2a77,R.drawable.neet2a78,R.drawable.noans,R.drawable.neet2a80,
+            R.drawable.noans,R.drawable.neet2a82,R.drawable.neet2a83,R.drawable.noans,R.drawable.neet2a85,R.drawable.neet2a86,R.drawable.neet2a87,R.drawable.noans,R.drawable.neet2a89,R.drawable.neet2a90,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
     };
 
 

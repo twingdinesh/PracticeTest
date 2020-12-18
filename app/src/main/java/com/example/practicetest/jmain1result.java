@@ -23,7 +23,6 @@ public class jmain1result extends AppCompatActivity {
         setContentView(R.layout.activity_jmain1result);
         result=(TextView)findViewById(R.id.result);
         resQuesNo=(TextView)findViewById(R.id.resultQuestionNo);
-        resQues=(TextView)findViewById(R.id.resultQuestion);
         correctans=(TextView)findViewById(R.id.correctans);
         yourans=(TextView)findViewById(R.id.yourans);
         next=(Button)findViewById(R.id.next);

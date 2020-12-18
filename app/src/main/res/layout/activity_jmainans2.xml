@@ -8,6 +8,7 @@
     android:padding="5dp"
     tools:context=".jmainans2">
 
+
     <TextView
         android:id="@+id/ansQuestionNo"
         android:layout_width="match_parent"
@@ -25,13 +26,17 @@
         android:id="@+id/anscorrectans"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:fontFamily="@font/basic"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/ansimg"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ansimg" />
+        app:layout_constraintTop_toBottomOf="@+id/imgques" />
 
     <Button
         android:id="@+id/ansnext"
@@ -78,9 +83,7 @@
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgques"
+        app:layout_constraintTop_toBottomOf="@+id/anscorrectans"
         app:srcCompat="@drawable/a1" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

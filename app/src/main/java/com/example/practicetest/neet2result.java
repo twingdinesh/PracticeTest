@@ -25,14 +25,14 @@ public class neet2result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_neet2result);
         result=(TextView)findViewById(R.id.result);
-        explain=(Button)findViewById(R.id.explain);
-        ansimg=(ImageView)findViewById(R.id.imageans);
         resQuesNo=(TextView)findViewById(R.id.resultQuestionNo);
         quesimg=(ImageView)findViewById(R.id.imgques);
         correctans=(TextView)findViewById(R.id.correctans);
         yourans=(TextView)findViewById(R.id.yourans);
         next=(Button)findViewById(R.id.next);
         prev=(Button)findViewById(R.id.prev);
+        explain=(Button)findViewById(R.id.explain);
+        ansimg=(ImageView)findViewById(R.id.imageans);
         ansimg.setVisibility(View.INVISIBLE);
         prev.setVisibility(View.INVISIBLE);
         Bundle bundle=getIntent().getExtras();

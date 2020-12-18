@@ -8,55 +8,55 @@
     android:background="@color/white"
     tools:context=".jmainans3">
 
+
     <TextView
         android:id="@+id/ansQuestionNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/basic"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="5dp" />
 
     <TextView
         android:id="@+id/anscorrectans"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="267dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:fontFamily="@font/basic"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ansimg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgques" />
 
     <Button
         android:id="@+id/ansnext"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="11dp"
         android:background="@drawable/greywhitebg"
         android:fontFamily="monospace"
         android:text="next"
         android:textAllCaps="false"
         android:textColor="@color/rose"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/ansprev"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/ansprev"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="11dp"
         android:background="@drawable/greywhitebg"
         android:fontFamily="monospace"
         android:text="prev"
@@ -68,15 +68,23 @@
 
     <ImageView
         android:id="@+id/imgques"
-        android:layout_width="wrap_content"
+        android:layout_width="391dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:adjustViewBounds="true"
-        app:layout_constraintBottom_toTopOf="@+id/anscorrectans"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ansQuestionNo"
         app:srcCompat="@drawable/jmone1" />
 
+    <ImageView
+        android:id="@+id/ansimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anscorrectans"
+        app:srcCompat="@drawable/a1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

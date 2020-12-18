@@ -64,7 +64,17 @@ public class neetquestionlibrary2 {
             R.drawable.noans,R.drawable.a52,R.drawable.a53,R.drawable.a54,R.drawable.a55,R.drawable.noans,R.drawable.a57,R.drawable.a58,R.drawable.a59,R.drawable.a60,
             R.drawable.a61,R.drawable.a62,R.drawable.a63,R.drawable.a64,R.drawable.a65,R.drawable.a66,R.drawable.a67,R.drawable.noans,R.drawable.a69,R.drawable.a70,
             R.drawable.a71,R.drawable.a72,R.drawable.noans,R.drawable.a74,R.drawable.noans,R.drawable.a76,R.drawable.a77,R.drawable.a78,R.drawable.a79,R.drawable.noans,
-            R.drawable.a81,R.drawable.a82,R.drawable.noans,R.drawable.a84,R.drawable.noans,R.drawable.a86,R.drawable.a87,R.drawable.a88,R.drawable.a89,R.drawable.noans,};
+            R.drawable.a81,R.drawable.a82,R.drawable.noans,R.drawable.a84,R.drawable.noans,R.drawable.a86,R.drawable.a87,R.drawable.a88,R.drawable.a89,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+            R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,R.drawable.noans,
+    };
 
     public int length=mQuestions.length;
 

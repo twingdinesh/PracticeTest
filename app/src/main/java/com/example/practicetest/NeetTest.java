@@ -78,7 +78,7 @@ public class NeetTest extends AppCompatActivity {
     }
 
     public void neetttest5(View view) {
-        Intent in=new Intent(NeetTest.this,nextupdate.class);
+        Intent in=new Intent(NeetTest.this,neet5alert.class);
         NeetTest.this.finish();
         startActivity(in);
     }

@@ -38,7 +38,16 @@ public class jeemainquestionlibrary3 {
             "1","3","4","4","3","4","4","4","1","3","4","2","2","1","2","3","3","1","1","2",
             "0.5","0.5","2","3","7",
     };
-
+    public int answerimages[]={
+                R.drawable.jmain1a1,R.drawable.jmain1a2,R.drawable.jmain1a3,R.drawable.jmain1a4,R.drawable.jmain1a5,R.drawable.jmain1a6,R.drawable.jmain1a7,R.drawable.jmain1a8,R.drawable.jmain1a9,R.drawable.noans,
+            R.drawable.noans,R.drawable.jmain1a12,R.drawable.jmain1a13,R.drawable.jmain1a14,R.drawable.jmain1a15,R.drawable.jmain1a16,R.drawable.jmain1a17,R.drawable.jmain1a18,R.drawable.jmain1a19,R.drawable.jmain1a20,
+            R.drawable.jmain1a21,R.drawable.jmain1a22,R.drawable.jmain1a23,R.drawable.jmain1a24,R.drawable.jmain1a25,R.drawable.jmain1a26,R.drawable.jmain1a27,R.drawable.jmain1a28,R.drawable.jmain1a29,R.drawable.noans,
+            R.drawable.jmain1a31,R.drawable.noans,R.drawable.jmain1a33,R.drawable.jmain1a34,R.drawable.jmain1a35,R.drawable.jmain1a36,R.drawable.jmain1a37,R.drawable.jmain1a38,R.drawable.noans,R.drawable.jmain1a40,
+            R.drawable.noans,R.drawable.jmain1a42,R.drawable.jmain1a43,R.drawable.jmain1a44,R.drawable.noans,R.drawable.jmain1a46,R.drawable.jmain1a47,R.drawable.jmain1a48,R.drawable.jmain1a49,R.drawable.jmain1a50,
+            R.drawable.jmain1a51,R.drawable.jmain1a52,R.drawable.jmain1a53,R.drawable.jmain1a54,R.drawable.jmain1a55,R.drawable.jmain1a56,R.drawable.jmain1a57,R.drawable.jmain1a58,R.drawable.jmain1a59,R.drawable.jmain1a60,
+            R.drawable.jmain1a61,R.drawable.jmain1a62,R.drawable.jmain1a63,R.drawable.jmain1a64,R.drawable.jmain1a65,R.drawable.jmain1a66,R.drawable.jmain1a67,R.drawable.jmain1a68,R.drawable.jmain1a69,R.drawable.jmain1a70,
+            R.drawable.jmain1a71,R.drawable.jmain1a72,R.drawable.jmain1a73,R.drawable.jmain1a74,R.drawable.jmain1a75
+    };
     public int length=mQuestions.length;
 
     public int getQuestions(int a){

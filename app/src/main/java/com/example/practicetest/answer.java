@@ -14,7 +14,7 @@ public class answer extends AppCompatActivity {
 
     questionlibrary questionlibrary=new questionlibrary();
     TextView questionno,answer;
-    ImageView quesimg;
+    ImageView quesimg,ansimg;
     Button nextans,ansprev;
     private int qno=0;
     @Override
@@ -27,6 +27,7 @@ public class answer extends AppCompatActivity {
         nextans=(Button) findViewById(R.id.ansnext);
         ansprev=(Button)findViewById(R.id.ansprev);
         ansprev.setVisibility(View.INVISIBLE);
+        ansimg=(ImageView)findViewById(R.id.ansimg);
         updatesheet();
         nextans.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +67,7 @@ public class answer extends AppCompatActivity {
 
             questionno.setText("question no:" + (qno + 1));
             quesimg.setImageResource(questionlibrary.getQuestions(qno));
+            ansimg.setImageResource(questionlibrary.answerimages[qno]);
             answer.setText("correct option: "+questionlibrary.getCorrectAnswer(qno));
             qno++;
         }
@@ -83,6 +85,7 @@ public class answer extends AppCompatActivity {
         {
             qno--;
             questionno.setText("question no:" + (qno + 1));
+            ansimg.setImageResource(questionlibrary.answerimages[qno]);
             quesimg.setImageResource(questionlibrary.getQuestions(qno));
             answer.setText("correct option: "+questionlibrary.getCorrectAnswer(qno));
 

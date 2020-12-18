@@ -32,7 +32,7 @@ public class jeemain extends AppCompatActivity {
         {
             case R.id.jmainbookmark1 :
             {
-                Intent in=new Intent(jeemain.this,nextupdate.class);
+                Intent in=new Intent(jeemain.this,jeemainhistory.class);
                 startActivity(in);
             }
         }
@@ -75,13 +75,13 @@ public class jeemain extends AppCompatActivity {
     }
 
     public void neetttest5(View view) {
-        Intent in=new Intent(jeemain.this,nextupdate.class);
+        Intent in=new Intent(jeemain.this,jmainalert5.class);
         jeemain.this.finish();
         startActivity(in);
     }
 
     public void history(View view) {
-        Intent in=new Intent(this,jeemainhistory.class);
+        Intent in=new Intent(this,jmainalert6.class);
         startActivity(in);
     }
 }
